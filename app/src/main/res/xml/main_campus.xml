@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RealtiveLayout xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:contentDescription="@string/main_campus"
+        android:scaleType="centerInside"
+        android:src="@drawable/main_campus" />
+</RealtiveLayout>
