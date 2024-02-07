@@ -49,6 +49,49 @@ class Main : ComponentActivity() {
     fun appHomeScreen() {
         CSCE3615_MoblieApp_ProjectTheme {
             Image(painter = painterResource(id = R.drawable.home_screen), contentDescription = null, contentScale = ContentScale.Crop, alpha = 1f)
+            MainCampus()
+        }
+    }
+
+    //Takes you to the Main Campus class
+    @Composable
+    fun MainCampus(modifier: Modifier = Modifier
+        .fillMaxSize()
+        .wrapContentSize(Alignment.CenterStart)){
+        var isButtonClicked by remember {mutableStateOf(false)}
+
+        Column(modifier = modifier, horizontalAlignment = Alignment.CenterHorizontally)
+        {
+
+            Spacer(modifier = Modifier.height(16.dp))
+            Button(onClick = {isButtonClicked = !isButtonClicked}) {
+                //Text(stringResource(R.string.img1))
+            }
+            if(isButtonClicked == true)
+            {
+                Image(painter = painterResource(R.drawable.test_img), contentDescription = "Tepig")
+            }
+        }
+    }
+
+    //Takes you to the discovery park class
+    @Composable
+    fun DiscoveryPark(modifier: Modifier = Modifier
+        .fillMaxSize()
+        .wrapContentSize(Alignment.CenterStart)){
+        var isButtonClicked by remember {mutableStateOf(false)}
+
+        Column(modifier = modifier, horizontalAlignment = Alignment.CenterHorizontally)
+        {
+
+            Spacer(modifier = Modifier.height(16.dp))
+            Button(onClick = {isButtonClicked = !isButtonClicked}) {
+                //Text(stringResource(R.string.avesta))
+            }
+            if(isButtonClicked == true)
+            {
+                //Image(painter = painterResource(R.drawable.cafe_gab), contentDescription = "Tepig")
+            }
         }
     }
 
