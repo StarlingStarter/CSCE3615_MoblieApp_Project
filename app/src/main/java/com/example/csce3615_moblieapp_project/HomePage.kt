@@ -43,15 +43,13 @@ class HomePage : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colorScheme.background
                 ) {
-                    AppHomeScreen()
-
                     if(isMainCampusPressed == true)
                     {
                         Text(stringResource(R.string.output2))
                         val intent =  Intent(this,MainCampus::class.java)
                         startActivity(intent)
-
                     }
+                    AppHomeScreen()
                 }
             }
         }
@@ -68,15 +66,17 @@ class HomePage : ComponentActivity() {
                 alpha = 1f
             )
             MainCampusMenuDisplay()
-            DiscoveryPark()
+
+            //DiscoveryPark()
         }
     }
 }
+
+
     //Takes you to the Main Campus class
     @Composable
-    fun MainCampusMenuDisplay(modifier: Modifier = Modifier
-        .fillMaxSize()
-        .wrapContentSize(Alignment.Center)){
+    fun MainCampusMenuDisplay(modifier: Modifier = Modifier.fillMaxSize().wrapContentSize(Alignment.Center))
+    {
         var isButtonClicked by remember {mutableStateOf(false)}
 
         Column(modifier = modifier, horizontalAlignment = Alignment.CenterHorizontally)
@@ -86,13 +86,13 @@ class HomePage : ComponentActivity() {
             Button(onClick = {isButtonClicked = !isButtonClicked}) {
                 Text(stringResource(R.string.main_campus))
             }
+            Text(stringResource(R.string.output1))
             if(isButtonClicked == true)
             {
-                Text(stringResource(R.string.output1))
                 isMainCampusPressed = true
             }
         }
-        }
+    }
 
 
     //Takes you to the discovery park class
@@ -111,7 +111,7 @@ class HomePage : ComponentActivity() {
             }
             if(isButtonClicked == true)
             {
-                //Image(painter = painterResource(R.drawable.cafe_gab), contentDescription = "Tepig")
+                Image(painter = painterResource(R.drawable.discovery_park), contentDescription = "Tepig")
             }
         }
     }
