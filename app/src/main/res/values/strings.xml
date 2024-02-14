@@ -2,5 +2,6 @@
     <string name="app_name">CSCE3615_MoblieApp_Project</string>
     <string name="avesta">Avesta</string>
     <string name="main_campus">Main Campus menu screen</string>
-
+    <string name="output1">The button has not been pressed</string>
+    <string name="output2">The button has been pressed</string>
 </resources>

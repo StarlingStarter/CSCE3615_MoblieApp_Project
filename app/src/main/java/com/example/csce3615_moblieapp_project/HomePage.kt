@@ -1,5 +1,8 @@
 package com.example.csce3615_moblieapp_project
+import android.content.Intent
 import android.os.Bundle
+import android.view.View
+import android.widget.Button
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.foundation.Image
@@ -11,6 +14,7 @@ import androidx.compose.foundation.layout.wrapContentSize
 import androidx.compose.material3.Button
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
+import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
@@ -20,11 +24,16 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import androidx.core.content.ContextCompat.startActivity
 import com.example.csce3615_moblieapp_project.ui.theme.CSCE3615_MoblieApp_ProjectTheme
 
-class Main : ComponentActivity() {
+var isMainCampusPressed: Boolean = false
+class HomePage : ComponentActivity() {
+
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
@@ -34,7 +43,15 @@ class Main : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colorScheme.background
                 ) {
-                    appHomeScreen()
+                    AppHomeScreen()
+
+                    if(isMainCampusPressed == true)
+                    {
+                        Text(stringResource(R.string.output2))
+                        val intent =  Intent(this,MainCampus::class.java)
+                        startActivity(intent)
+
+                    }
                 }
             }
         }
@@ -42,7 +59,7 @@ class Main : ComponentActivity() {
 
     @Preview(showBackground = true)
     @Composable
-    fun appHomeScreen() {
+    fun AppHomeScreen() {
         CSCE3615_MoblieApp_ProjectTheme {
             Image(
                 painter = painterResource(id = R.drawable.home_screen),
@@ -67,11 +84,12 @@ class Main : ComponentActivity() {
 
             Spacer(modifier = Modifier.height(16.dp))
             Button(onClick = {isButtonClicked = !isButtonClicked}) {
-                //Text(stringResource(R.string.img1))
+                Text(stringResource(R.string.main_campus))
             }
             if(isButtonClicked == true)
             {
-                Image(painter = painterResource(R.drawable.test_img), contentDescription = "just a test button")
+                Text(stringResource(R.string.output1))
+                isMainCampusPressed = true
             }
         }
         }
