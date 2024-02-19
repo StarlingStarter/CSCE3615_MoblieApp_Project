@@ -12,6 +12,8 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.CSCE3615_MoblieApp_Project"
         tools:targetApi="31">
+
+        <!--Home Page (starting point)-->
         <activity
             android:name=".HomePage"
             android:exported="true"
@@ -23,6 +25,22 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <!--Home Page (end point)-->
+
+        <!--The Main Campus activity-->
+        <activity
+            android:name=".MainCampus"
+            android:exported="true"
+            android:label="@string/app_name"
+            android:theme="@style/Theme.CSCE3615_MoblieApp_Project">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <!--The Main Campus activity (end)-->
+
     </application>
 
 </manifest>
