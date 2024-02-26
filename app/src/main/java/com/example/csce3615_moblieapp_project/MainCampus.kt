@@ -25,7 +25,7 @@ class MainCampus : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colorScheme.background
                 ) {
-                    appHomeScreen()
+                    appMainCampus()
                 }
             }
         }
@@ -33,7 +33,7 @@ class MainCampus : ComponentActivity() {
 
     @Preview(showBackground = true)
     @Composable
-    fun appHomeScreen() {
+    fun appMainCampus() {
         CSCE3615_MoblieApp_ProjectTheme {
             Image(painter = painterResource(id = R.drawable.main_campus), contentDescription = null, contentScale = ContentScale.Crop, alpha = 1f)
         }
