@@ -1,7 +1,18 @@
 <resources>
     <string name="app_name">CSCE3615_MoblieApp_Project</string>
-    <string name="avesta">Avesta</string>
-    <string name="main_campus">Main Campus menu screen</string>
+
     <string name="output1">The button has not been pressed</string>
     <string name="output2">The button has been pressed</string>
+
+
+    <string name="Discovery_park">discovery park</string>
+    <string name="Discovery_park_grill">discovery park grill menu</string>
+    <string name="Discovery_park_starbucks">discovery park Starbucks menu</string>
+
+    <string name="main_campus">Main Campus</string>
+    <string name="DiningHalls">Dining Halls</string>
+    <string name="Union">Union</string>
+    <string name="Other">Other</string>
+
+    <string name="avesta">Avesta</string>
 </resources>

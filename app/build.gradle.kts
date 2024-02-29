@@ -9,7 +9,7 @@ android {
 
     defaultConfig {
         applicationId = "com.example.csce3615_moblieapp_project"
-        minSdk = 24
+        minSdk = 25
         targetSdk = 34
         versionCode = 1
         versionName = "1.0"
