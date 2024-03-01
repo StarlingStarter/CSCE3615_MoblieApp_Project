@@ -1,9 +1,13 @@
 package com.example.csce3615_moblieapp_project.ui.theme
 
 import androidx.compose.foundation.Image
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.layout.width
 import androidx.compose.material3.Button
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -12,6 +16,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
+import androidx.compose.ui.unit.dp
 import androidx.lifecycle.ViewModel
 import com.example.csce3615_moblieapp_project.R
 
@@ -39,15 +44,30 @@ fun MainCampusScreen(
                 alpha = 1f,
                 modifier = Modifier.fillMaxWidth()
             )
-            Button(onClick = DiningHallRoute) {
-                Text(stringResource(R.string.DiningHalls))
+            Box() {
+                Image(painter = painterResource(id = R.drawable.dining_halls_button), contentDescription = null,
+                    modifier = Modifier
+                        .height(90.dp)
+                        .width(216.dp)
+                        .clickable(onClick = DiningHallRoute))
             }
-            Button(onClick = UnionRoute) {
-                Text(stringResource(R.string.Union))
+            Box() {
+                Image(painter = painterResource(id = R.drawable.union_button), contentDescription = null,
+                    modifier = Modifier
+                        .height(90.dp)
+                        .width(216.dp)
+                        .clickable(onClick = UnionRoute))
             }
-            Button(onClick = OtherRoute) {
-                Text(stringResource(R.string.Other))
+            Box() {
+                Image(painter = painterResource(id = R.drawable.other_button), contentDescription = null,
+                    modifier = Modifier
+                        .height(90.dp)
+                        .width(216.dp)
+                        .clickable(onClick = OtherRoute))
             }
+//            Button(onClick = DiningHallRoute) { Text(stringResource(R.string.DiningHalls)) }
+//            Button(onClick = UnionRoute) { Text(stringResource(R.string.Union)) }
+//            Button(onClick = OtherRoute) { Text(stringResource(R.string.Other)) }
         }
     }
 }

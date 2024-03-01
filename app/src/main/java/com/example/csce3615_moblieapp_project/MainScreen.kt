@@ -15,7 +15,9 @@ import androidx.navigation.compose.composable
 import androidx.navigation.compose.currentBackStackEntryAsState
 import androidx.navigation.compose.rememberNavController
 import androidx.compose.foundation.Image
+import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
 import com.example.csce3615_moblieapp_project.ui.theme.DiningHallScreen
@@ -79,57 +81,44 @@ fun MainScreenApp(
                     },
                     modifier = Modifier
                         .fillMaxSize()
+                        .background(Color.White)
 //                       .padding(dimensionResource(R.dimen.padding_medium))
                 )
 
             }
             composable(route = MainScreen.MainCampus.name) {
                 MainCampusScreen(
-//                    subtotal = uiState.price,
                     DiningHallRoute = { navController.navigate(MainScreen.DiningHall.name) },
                     UnionRoute = { navController.navigate(MainScreen.Union.name) },
-                    OtherRoute = { navController.navigate(MainScreen.Other.name) }
-//                    onCancelButtonClicked = {
-//                        cancelOrderAndNavigateToStart(viewModel, navController)
-//                    },
-//                    options = uiState.pickupOptions,
-//                    onSelectionChanged = { viewModel.setDate(it) },
-//                    modifier = Modifier.fillMaxHeight()
+                    OtherRoute = { navController.navigate(MainScreen.Other.name) },
+                    modifier = Modifier
+                               .fillMaxSize()
+                               .background(Color.White)
                 )
             }
             composable(route = MainScreen.DiscoveryPark.name) {
-//                val context = LocalContext.current
                 DiscoveryParkScreen(
                     discoveryParkGrillRoute = { navController.navigate(MainScreen.DiscoveryPark.name) },
                     discoveryParkStarbucksRoute = { navController.navigate(MainScreen.DiscoveryPark.name)},
-
-//                    onCancelButtonClicked = {
-//                        cancelOrderAndNavigateToStart(viewModel, navController)
-//                    },
-//                    options = DataSource.flavors.map { id -> context.resources.getString(id) },
-//                    onSelectionChanged = { viewModel.setFlavor(it) },
-//                    modifier = Modifier.fillMaxHeight()
+                    modifier = Modifier
+                        .fillMaxSize()
+                        .background(Color.White)
                 )
             }
             composable(route = MainScreen.DiningHall.name) {
                 DiningHallScreen(
-//                    subtotal = uiState.price,
                     bruceteriaMenu = { navController.navigate(MainScreen.Menu.name) },
                     champsMenu = { navController.navigate(MainScreen.Menu.name) },
                     eagleLandingMenu = { navController.navigate(MainScreen.Menu.name) },
                     kitcheWestMenu = { navController.navigate(MainScreen.Menu.name) },
-                    meanGreenCafeMenu = { navController.navigate(MainScreen.Menu.name) }
-//                    onCancelButtonClicked = {
-//                        cancelOrderAndNavigateToStart(viewModel, navController)
-//                    },
-//                    options = uiState.pickupOptions,
-//                    onSelectionChanged = { viewModel.setDate(it) },
-//                    modifier = Modifier.fillMaxHeight()
+                    meanGreenCafeMenu = { navController.navigate(MainScreen.Menu.name) } ,
+                    modifier = Modifier
+                            .fillMaxSize()
+                            .background(Color.White)
                 )
             }
             composable(route = MainScreen.Union.name) {
                 UnionScreen(
-//                    subtotal = uiState.price,
                     AvestaMenu = { navController.navigate(MainScreen.Union.name) },
                     BurgerKingMenu = { navController.navigate(MainScreen.Union.name) },
                     CampusChatMenu = { navController.navigate(MainScreen.Union.name) },
@@ -138,29 +127,23 @@ fun MainScreenApp(
                     JambaMenu = { navController.navigate(MainScreen.Union.name) },
                     KrispyKrunchChicken = { navController.navigate(MainScreen.Union.name) },
                     Starbucks = { navController.navigate(MainScreen.Union.name) },
-                    VerdeEverydday = { navController.navigate(MainScreen.Union.name) }
-//                    onCancelButtonClicked = {
-//                        cancelOrderAndNavigateToStart(viewModel, navController)
-//                    },
-//                    options = uiState.pickupOptions,
-//                    onSelectionChanged = { viewModel.setDate(it) },
-//                    modifier = Modifier.fillMaxHeight()
+                    VerdeEverydday = { navController.navigate(MainScreen.Union.name) },
+                    modifier = Modifier
+                        .fillMaxSize()
+                        .background(Color.White)
                 )
             }
             composable(route = MainScreen.Other.name) {
                 OtherScreen(
-//                    subtotal = uiState.price,
                     cafeGABMenu = { navController.navigate(MainScreen.Other.name) },
                     EinsteinBrosBagels = { navController.navigate(MainScreen.Other.name) },
                     StarbucksStand = { navController.navigate(MainScreen.Other.name) },
                     TheMarketByClarkBakery = { navController.navigate(MainScreen.Other.name) },
-                    WhichWhichMenu = { navController.navigate(MainScreen.Other.name) }
-//                    onCancelButtonClicked = {
-//                        cancelOrderAndNavigateToStart(viewModel, navController)
-//                    },
-//                    options = uiState.pickupOptions,
-//                    onSelectionChanged = { viewModel.setDate(it) },
-//                    modifier = Modifier.fillMaxHeight()
+                    WhichWhichMenu = { navController.navigate(MainScreen.Other.name) },
+                    modifier = Modifier
+                        .fillMaxSize()
+                        .background(Color.White)
+
                 )
             }
         }

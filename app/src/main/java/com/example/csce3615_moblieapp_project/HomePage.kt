@@ -30,7 +30,12 @@ import com.example.csce3615_moblieapp_project.ui.theme.CSCE3615_MoblieApp_Projec
 var isMainCampusPressed: Boolean = false
 class HomePage : ComponentActivity() {
 
+/*
 
+DEAD CODE will delete after first presentation
+
+
+ */
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {

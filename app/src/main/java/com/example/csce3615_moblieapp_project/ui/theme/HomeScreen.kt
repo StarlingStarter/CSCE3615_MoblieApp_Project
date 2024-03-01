@@ -2,9 +2,13 @@ package com.example.csce3615_moblieapp_project.ui.theme
 
 import androidx.annotation.StringRes
 import androidx.compose.foundation.Image
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.layout.widthIn
 import androidx.compose.material3.Button
 import androidx.compose.material3.Text
@@ -40,12 +44,22 @@ fun HomeScreen(
                 alpha = 1f,
                 modifier = Modifier.fillMaxWidth()
             )
-            Button(onClick = MainCampusRoute) {
-                Text(stringResource(R.string.main_campus))
+            Box() {
+                Image(painter = painterResource(id = R.drawable.main_campus_button), contentDescription = null,
+                    modifier = Modifier
+                        .height(90.dp)
+                        .width(216.dp)
+                        .clickable(onClick = MainCampusRoute))
             }
-            Button(onClick = discoveryParkRoute) {
-                Text(stringResource(R.string.Discovery_park))
+            Box() {
+                Image(painter = painterResource(id = R.drawable.discovery_park_button), contentDescription = null,
+                    modifier = Modifier
+                        .height(90.dp)
+                        .width(216.dp)
+                        .clickable(onClick = discoveryParkRoute))
             }
+//            Button(onClick = MainCampusRoute) { Text(stringResource(R.string.main_campus)) }
+//            Button(onClick = discoveryParkRoute) { Text(stringResource(R.string.Discovery_park)) }
         }
     }
 }
