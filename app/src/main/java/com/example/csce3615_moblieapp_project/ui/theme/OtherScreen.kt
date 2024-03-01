@@ -1,11 +1,9 @@
 package com.example.csce3615_moblieapp_project.ui.theme
 
-import androidx.annotation.StringRes
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxWidth
-import androidx.compose.foundation.layout.widthIn
 import androidx.compose.material3.Button
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -14,14 +12,15 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
-import androidx.compose.ui.tooling.preview.Preview
-import androidx.compose.ui.unit.dp
 import com.example.csce3615_moblieapp_project.R
 
 @Composable
-fun HomeScreen(
-    discoveryParkRoute:() -> Unit,
-    MainCampusRoute:() -> Unit,
+fun OtherScreen(
+    cafeGABMenu:() -> Unit,
+    EinsteinBrosBagels:() -> Unit,
+    StarbucksStand:() -> Unit,
+    TheMarketByClarkBakery:() -> Unit,
+    WhichWhichMenu:() -> Unit,
     modifier: Modifier = Modifier
 ) {
     Column(
@@ -40,40 +39,21 @@ fun HomeScreen(
                 alpha = 1f,
                 modifier = Modifier.fillMaxWidth()
             )
-            Button(onClick = MainCampusRoute) {
-                Text(stringResource(R.string.main_campus))
+            Button(onClick = cafeGABMenu) {
+                Text(stringResource(R.string.Cafe_GAB))
             }
-            Button(onClick = discoveryParkRoute) {
-                Text(stringResource(R.string.Discovery_park))
+            Button(onClick = EinsteinBrosBagels) {
+                Text(stringResource(R.string.Einstein_Bros_Bagels))
+            }
+            Button(onClick = StarbucksStand) {
+                Text(stringResource(R.string.Starbucks_Stand))
+            }
+            Button(onClick = TheMarketByClarkBakery) {
+                Text(stringResource(R.string.The_Market_By_Clark_Bakery))
+            }
+            Button(onClick = WhichWhichMenu) {
+                Text(stringResource(R.string.Which_Which))
             }
         }
     }
-}
-
-@Composable
-fun SelectQuantityButton(
-    @StringRes labelResourceId: Int,
-    onClick: () -> Unit,
-    modifier: Modifier = Modifier
-) {
-    Button(
-        onClick = onClick,
-        modifier = modifier.widthIn(min = 250.dp)
-    ) {
-        Text(stringResource(labelResourceId))
-    }
-}
-
-@Preview
-@Composable
-fun StartOrderPreview() {
-//    CupcakeTheme {
-//        HomeScreen(
-//            quantityOptions = DataSource.quantityOptions,
-//            onNextButtonClicked = {},
-//            modifier = Modifier
-//                .fillMaxSize()
-//                .padding(dimensionResource(R.dimen.padding_medium))
-//        )
-//    }
 }

@@ -14,14 +14,25 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.currentBackStackEntryAsState
 import androidx.navigation.compose.rememberNavController
+import androidx.compose.foundation.Image
+import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.ui.layout.ContentScale
+import androidx.compose.ui.res.painterResource
+import com.example.csce3615_moblieapp_project.ui.theme.DiningHallScreen
 import com.example.csce3615_moblieapp_project.ui.theme.DiscoveryParkScreen
 import com.example.csce3615_moblieapp_project.ui.theme.HomeScreen
 import com.example.csce3615_moblieapp_project.ui.theme.MainCampusScreen
+import com.example.csce3615_moblieapp_project.ui.theme.OtherScreen
+import com.example.csce3615_moblieapp_project.ui.theme.UnionScreen
 
 enum class MainScreen (){
     Start,
     DiscoveryPark,
     MainCampus,
+    DiningHall,
+    Menu,
+    Union,
+    Other
 }
 
 @Composable
@@ -58,23 +69,39 @@ fun MainScreenApp(
             composable(route = MainScreen.Start.name) {
                 HomeScreen(
                     /*Discovery Park Navigation and Main Campus Button display*/
-                    discoveryParkRoute = {
-//                        viewModel.setQuantity(it)
-                        navController.navigate(MainScreen.DiscoveryPark.name)
-                    },MainCampusRoute = {
+
+                    MainCampusRoute = {
 //                        viewModel.setQuantity(it)
                         navController.navigate(MainScreen.MainCampus.name)
+                    },discoveryParkRoute = {
+//                        viewModel.setQuantity(it)
+                        navController.navigate(MainScreen.DiscoveryPark.name)
                     },
                     modifier = Modifier
                         .fillMaxSize()
 //                       .padding(dimensionResource(R.dimen.padding_medium))
                 )
+
+            }
+            composable(route = MainScreen.MainCampus.name) {
+                MainCampusScreen(
+//                    subtotal = uiState.price,
+                    DiningHallRoute = { navController.navigate(MainScreen.DiningHall.name) },
+                    UnionRoute = { navController.navigate(MainScreen.Union.name) },
+                    OtherRoute = { navController.navigate(MainScreen.Other.name) }
+//                    onCancelButtonClicked = {
+//                        cancelOrderAndNavigateToStart(viewModel, navController)
+//                    },
+//                    options = uiState.pickupOptions,
+//                    onSelectionChanged = { viewModel.setDate(it) },
+//                    modifier = Modifier.fillMaxHeight()
+                )
             }
             composable(route = MainScreen.DiscoveryPark.name) {
-                val context = LocalContext.current
+//                val context = LocalContext.current
                 DiscoveryParkScreen(
-                discoveryParkGrillRoute = { navController.navigate(MainScreen.DiscoveryPark.name) },
-                discoveryParkStarbucksRoute = { navController.navigate(MainScreen.DiscoveryPark.name)},
+                    discoveryParkGrillRoute = { navController.navigate(MainScreen.DiscoveryPark.name) },
+                    discoveryParkStarbucksRoute = { navController.navigate(MainScreen.DiscoveryPark.name)},
 
 //                    onCancelButtonClicked = {
 //                        cancelOrderAndNavigateToStart(viewModel, navController)
@@ -84,12 +111,50 @@ fun MainScreenApp(
 //                    modifier = Modifier.fillMaxHeight()
                 )
             }
-            composable(route = MainScreen.MainCampus.name) {
-                MainCampusScreen(
+            composable(route = MainScreen.DiningHall.name) {
+                DiningHallScreen(
 //                    subtotal = uiState.price,
-                    DiningHallRoute = { navController.navigate(MainScreen.MainCampus.name) },
-                    UnionRoute = { navController.navigate(MainScreen.MainCampus.name) },
-                    OtherRoute = { navController.navigate(MainScreen.MainCampus.name) }
+                    bruceteriaMenu = { navController.navigate(MainScreen.Menu.name) },
+                    champsMenu = { navController.navigate(MainScreen.Menu.name) },
+                    eagleLandingMenu = { navController.navigate(MainScreen.Menu.name) },
+                    kitcheWestMenu = { navController.navigate(MainScreen.Menu.name) },
+                    meanGreenCafeMenu = { navController.navigate(MainScreen.Menu.name) }
+//                    onCancelButtonClicked = {
+//                        cancelOrderAndNavigateToStart(viewModel, navController)
+//                    },
+//                    options = uiState.pickupOptions,
+//                    onSelectionChanged = { viewModel.setDate(it) },
+//                    modifier = Modifier.fillMaxHeight()
+                )
+            }
+            composable(route = MainScreen.Union.name) {
+                UnionScreen(
+//                    subtotal = uiState.price,
+                    AvestaMenu = { navController.navigate(MainScreen.Union.name) },
+                    BurgerKingMenu = { navController.navigate(MainScreen.Union.name) },
+                    CampusChatMenu = { navController.navigate(MainScreen.Union.name) },
+                    ChickfilAMenu = { navController.navigate(MainScreen.Union.name) },
+                    FuzzyTacoMenu = { navController.navigate(MainScreen.Union.name) },
+                    JambaMenu = { navController.navigate(MainScreen.Union.name) },
+                    KrispyKrunchChicken = { navController.navigate(MainScreen.Union.name) },
+                    Starbucks = { navController.navigate(MainScreen.Union.name) },
+                    VerdeEverydday = { navController.navigate(MainScreen.Union.name) }
+//                    onCancelButtonClicked = {
+//                        cancelOrderAndNavigateToStart(viewModel, navController)
+//                    },
+//                    options = uiState.pickupOptions,
+//                    onSelectionChanged = { viewModel.setDate(it) },
+//                    modifier = Modifier.fillMaxHeight()
+                )
+            }
+            composable(route = MainScreen.Other.name) {
+                OtherScreen(
+//                    subtotal = uiState.price,
+                    cafeGABMenu = { navController.navigate(MainScreen.Other.name) },
+                    EinsteinBrosBagels = { navController.navigate(MainScreen.Other.name) },
+                    StarbucksStand = { navController.navigate(MainScreen.Other.name) },
+                    TheMarketByClarkBakery = { navController.navigate(MainScreen.Other.name) },
+                    WhichWhichMenu = { navController.navigate(MainScreen.Other.name) }
 //                    onCancelButtonClicked = {
 //                        cancelOrderAndNavigateToStart(viewModel, navController)
 //                    },
