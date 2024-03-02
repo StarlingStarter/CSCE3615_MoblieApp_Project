@@ -26,19 +26,5 @@
             </intent-filter>
         </activity>
         <!--Home page (starting point) (end)-->
-
-        <!--The Main Campus activity-->
-        <activity
-            android:name=".MainCampus"
-            android:exported="true"
-            android:label="@string/app_name"
-            android:theme="@style/Theme.CSCE3615_MoblieApp_Project">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
-        <!--The Main Campus activity (end)-->
     </application>
 </manifest>

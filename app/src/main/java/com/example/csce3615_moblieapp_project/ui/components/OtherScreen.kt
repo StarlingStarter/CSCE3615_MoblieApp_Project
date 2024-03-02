@@ -1,4 +1,4 @@
-package com.example.csce3615_moblieapp_project.ui.theme
+package com.example.csce3615_moblieapp_project.ui.components
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.clickable
@@ -17,16 +17,15 @@ import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
-import androidx.lifecycle.ViewModel
 import com.example.csce3615_moblieapp_project.R
 
 @Composable
-fun DiningHallScreen(
-    bruceteriaMenu:() -> Unit,
-    champsMenu:() -> Unit,
-    eagleLandingMenu:() -> Unit,
-    kitcheWestMenu:() -> Unit,
-    meanGreenCafeMenu:() -> Unit,
+fun OtherScreen(
+    cafeGABMenu:() -> Unit,
+    EinsteinBrosBagels:() -> Unit,
+    StarbucksStand:() -> Unit,
+    TheMarketByClarkBakery:() -> Unit,
+    WhichWhichMenu:() -> Unit,
     modifier: Modifier = Modifier
 ) {
     Column(
@@ -47,45 +46,45 @@ fun DiningHallScreen(
                 modifier = Modifier.fillMaxWidth()
             )
             Box() {
-                Image(painter = painterResource(id = R.drawable.bruceteria), contentDescription = null,
+                Image(painter = painterResource(id = R.drawable.cafe_gab), contentDescription = null,
                     modifier = Modifier
                         .height(90.dp)
                         .width(216.dp)
-                        .clickable(onClick = bruceteriaMenu))
+                        .clickable(onClick = cafeGABMenu))
             }
             Box() {
-                Image(painter = painterResource(id = R.drawable.champs), contentDescription = null,
+                Image(painter = painterResource(id = R.drawable.einsteins_bros), contentDescription = null,
                     modifier = Modifier
                         .height(90.dp)
                         .width(216.dp)
-                        .clickable(onClick = champsMenu))
+                        .clickable(onClick = EinsteinBrosBagels))
             }
             Box() {
-                Image(painter = painterResource(id = R.drawable.eagle_s_landing), contentDescription = null,
+                Image(painter = painterResource(id = R.drawable.starbucks_stand), contentDescription = null,
                     modifier = Modifier
                         .height(90.dp)
                         .width(216.dp)
-                        .clickable(onClick = eagleLandingMenu))
+                        .clickable(onClick = StarbucksStand))
             }
             Box() {
-                Image(painter = painterResource(id = R.drawable.kitchen_west), contentDescription = null,
+                Image(painter = painterResource(id = R.drawable.the_market_by_clark_bakery), contentDescription = null,
                     modifier = Modifier
                         .height(90.dp)
                         .width(216.dp)
-                        .clickable(onClick = kitcheWestMenu))
+                        .clickable(onClick = TheMarketByClarkBakery))
             }
             Box() {
-                Image(painter = painterResource(id = R.drawable.mean_green_cafe), contentDescription = null,
+                Image(painter = painterResource(id = R.drawable.which_wich), contentDescription = null,
                     modifier = Modifier
                         .height(90.dp)
                         .width(216.dp)
-                        .clickable(onClick = meanGreenCafeMenu))
+                        .clickable(onClick = WhichWhichMenu))
             }
-//            Button(onClick = bruceteriaMenu) { Text(stringResource(R.string.Bruceteria)) }
-//            Button(onClick = champsMenu) { Text(stringResource(R.string.Champs)) }
-//            Button(onClick = eagleLandingMenu) { Text(stringResource(R.string.Eagle_landing)) }
-//            Button(onClick = kitcheWestMenu) { Text(stringResource(R.string.Kitchen_West)) }
-//            Button(onClick = meanGreenCafeMenu) { Text(stringResource(R.string.Mean_Green_Cafe)) }
+//            Button(onClick = cafeGABMenu) { Text(stringResource(R.string.Cafe_GAB)) }
+//            Button(onClick = EinsteinBrosBagels) { Text(stringResource(R.string.Einstein_Bros_Bagels)) }
+//            Button(onClick = StarbucksStand) { Text(stringResource(R.string.Starbucks_Stand)) }
+//            Button(onClick = TheMarketByClarkBakery) { Text(stringResource(R.string.The_Market_By_Clark_Bakery)) }
+//            Button(onClick = WhichWhichMenu) { Text(stringResource(R.string.Which_Which)) }
         }
     }
 }

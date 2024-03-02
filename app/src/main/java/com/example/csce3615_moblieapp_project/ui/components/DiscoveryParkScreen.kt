@@ -1,6 +1,5 @@
-package com.example.csce3615_moblieapp_project.ui.theme
+package com.example.csce3615_moblieapp_project.ui.components
 
-import androidx.annotation.StringRes
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
@@ -9,23 +8,18 @@ import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.width
-import androidx.compose.foundation.layout.widthIn
-import androidx.compose.material3.Button
-import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
-import androidx.compose.ui.res.stringResource
-import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.example.csce3615_moblieapp_project.R
 
 @Composable
-fun HomeScreen(
-    discoveryParkRoute:() -> Unit,
-    MainCampusRoute:() -> Unit,
+fun DiscoveryParkScreen(
+    discoveryParkGrillRoute:() -> Unit,
+    discoveryParkStarbucksRoute:() -> Unit,
     modifier: Modifier = Modifier
 ) {
     Column(
@@ -34,6 +28,7 @@ fun HomeScreen(
     ) {
         Column(
             modifier = Modifier.fillMaxWidth(),
+            verticalArrangement = Arrangement.SpaceEvenly,
             horizontalAlignment = Alignment.CenterHorizontally,
 //            verticalArrangement = Arrangement.spacedBy(dimensionResource(R.dimen.padding_small))
         ) {
@@ -45,49 +40,21 @@ fun HomeScreen(
                 modifier = Modifier.fillMaxWidth()
             )
             Box() {
-                Image(painter = painterResource(id = R.drawable.main_campus_button), contentDescription = null,
+                Image(painter = painterResource(id = R.drawable.dp_grill___market), contentDescription = null,
                     modifier = Modifier
                         .height(90.dp)
                         .width(216.dp)
-                        .clickable(onClick = MainCampusRoute))
+                        .clickable(onClick = discoveryParkGrillRoute))
             }
             Box() {
-                Image(painter = painterResource(id = R.drawable.discovery_park_button), contentDescription = null,
+                Image(painter = painterResource(id = R.drawable.starbucks_dp), contentDescription = null,
                     modifier = Modifier
                         .height(90.dp)
                         .width(216.dp)
-                        .clickable(onClick = discoveryParkRoute))
+                        .clickable(onClick = discoveryParkStarbucksRoute))
             }
-//            Button(onClick = MainCampusRoute) { Text(stringResource(R.string.main_campus)) }
-//            Button(onClick = discoveryParkRoute) { Text(stringResource(R.string.Discovery_park)) }
+//            Button(onClick = discoveryParkGrillRoute) { Text(stringResource(R.string.Discovery_park_grill)) }
+//            Button(onClick = discoveryParkStarbucksRoute) { Text(stringResource(R.string.Discovery_park_starbucks)) }
         }
     }
-}
-
-@Composable
-fun SelectQuantityButton(
-    @StringRes labelResourceId: Int,
-    onClick: () -> Unit,
-    modifier: Modifier = Modifier
-) {
-    Button(
-        onClick = onClick,
-        modifier = modifier.widthIn(min = 250.dp)
-    ) {
-        Text(stringResource(labelResourceId))
-    }
-}
-
-@Preview
-@Composable
-fun StartOrderPreview() {
-//    CupcakeTheme {
-//        HomeScreen(
-//            quantityOptions = DataSource.quantityOptions,
-//            onNextButtonClicked = {},
-//            modifier = Modifier
-//                .fillMaxSize()
-//                .padding(dimensionResource(R.dimen.padding_medium))
-//        )
-//    }
 }

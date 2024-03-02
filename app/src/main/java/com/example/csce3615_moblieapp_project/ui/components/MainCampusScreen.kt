@@ -1,4 +1,4 @@
-package com.example.csce3615_moblieapp_project.ui.theme
+package com.example.csce3615_moblieapp_project.ui.components
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.clickable
@@ -17,15 +17,15 @@ import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
+import androidx.lifecycle.ViewModel
 import com.example.csce3615_moblieapp_project.R
 
+
 @Composable
-fun OtherScreen(
-    cafeGABMenu:() -> Unit,
-    EinsteinBrosBagels:() -> Unit,
-    StarbucksStand:() -> Unit,
-    TheMarketByClarkBakery:() -> Unit,
-    WhichWhichMenu:() -> Unit,
+fun MainCampusScreen(
+    DiningHallRoute:() -> Unit,
+    UnionRoute:() -> Unit,
+    OtherRoute:() -> Unit,
     modifier: Modifier = Modifier
 ) {
     Column(
@@ -34,7 +34,6 @@ fun OtherScreen(
     ) {
         Column(
             modifier = Modifier.fillMaxWidth(),
-            verticalArrangement = Arrangement.SpaceEvenly,
             horizontalAlignment = Alignment.CenterHorizontally,
 //            verticalArrangement = Arrangement.spacedBy(dimensionResource(R.dimen.padding_small))
         ) {
@@ -46,45 +45,29 @@ fun OtherScreen(
                 modifier = Modifier.fillMaxWidth()
             )
             Box() {
-                Image(painter = painterResource(id = R.drawable.cafe_gab), contentDescription = null,
+                Image(painter = painterResource(id = R.drawable.dining_halls_button), contentDescription = null,
                     modifier = Modifier
                         .height(90.dp)
                         .width(216.dp)
-                        .clickable(onClick = cafeGABMenu))
+                        .clickable(onClick = DiningHallRoute))
             }
             Box() {
-                Image(painter = painterResource(id = R.drawable.einsteins_bros), contentDescription = null,
+                Image(painter = painterResource(id = R.drawable.union_button), contentDescription = null,
                     modifier = Modifier
                         .height(90.dp)
                         .width(216.dp)
-                        .clickable(onClick = EinsteinBrosBagels))
+                        .clickable(onClick = UnionRoute))
             }
             Box() {
-                Image(painter = painterResource(id = R.drawable.starbucks_stand), contentDescription = null,
+                Image(painter = painterResource(id = R.drawable.other_button), contentDescription = null,
                     modifier = Modifier
                         .height(90.dp)
                         .width(216.dp)
-                        .clickable(onClick = StarbucksStand))
+                        .clickable(onClick = OtherRoute))
             }
-            Box() {
-                Image(painter = painterResource(id = R.drawable.the_market_by_clark_bakery), contentDescription = null,
-                    modifier = Modifier
-                        .height(90.dp)
-                        .width(216.dp)
-                        .clickable(onClick = TheMarketByClarkBakery))
-            }
-            Box() {
-                Image(painter = painterResource(id = R.drawable.which_wich), contentDescription = null,
-                    modifier = Modifier
-                        .height(90.dp)
-                        .width(216.dp)
-                        .clickable(onClick = WhichWhichMenu))
-            }
-//            Button(onClick = cafeGABMenu) { Text(stringResource(R.string.Cafe_GAB)) }
-//            Button(onClick = EinsteinBrosBagels) { Text(stringResource(R.string.Einstein_Bros_Bagels)) }
-//            Button(onClick = StarbucksStand) { Text(stringResource(R.string.Starbucks_Stand)) }
-//            Button(onClick = TheMarketByClarkBakery) { Text(stringResource(R.string.The_Market_By_Clark_Bakery)) }
-//            Button(onClick = WhichWhichMenu) { Text(stringResource(R.string.Which_Which)) }
+//            Button(onClick = DiningHallRoute) { Text(stringResource(R.string.DiningHalls)) }
+//            Button(onClick = UnionRoute) { Text(stringResource(R.string.Union)) }
+//            Button(onClick = OtherRoute) { Text(stringResource(R.string.Other)) }
         }
     }
 }

@@ -1,4 +1,4 @@
-package com.example.csce3615_moblieapp_project.ui.theme
+package com.example.csce3615_moblieapp_project.ui.components
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.clickable
