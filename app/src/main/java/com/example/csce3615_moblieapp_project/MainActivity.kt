@@ -1,5 +1,7 @@
 package com.example.csce3615_moblieapp_project
 
+import android.content.ActivityNotFoundException
+import android.content.Intent
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
@@ -9,7 +11,15 @@ class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
-            MainScreenApp()
+            MainScreenApp({Intent(Intent.ACTION_MAIN).also {
+//                it.`package`="com.google.android.youtube"
+                it.`package`="com.google.android.apps.maps"
+                try {
+                    startActivity(it)
+                } catch (e: ActivityNotFoundException){
+                    e.printStackTrace()
+                }
+            }})
 //            CSCE3615_MoblieApp_ProjectTheme {
                 // A surface container using the 'background' color from the theme
 //                Surface(

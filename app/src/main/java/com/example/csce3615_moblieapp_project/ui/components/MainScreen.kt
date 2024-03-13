@@ -23,12 +23,14 @@ enum class MainScreen (){
     DiningHall,
     Menu,
     Union,
-    Other
+    Other,
+    Navigation
 }
 
 @Composable
 fun MainScreenApp(
     //viewModel: OrderViewModel = viewModel(),
+    mapHandler:() -> Unit,
     navController: NavHostController = rememberNavController()
 ) {
     // Get current back stack entry
@@ -87,8 +89,9 @@ fun MainScreenApp(
             }
             composable(route = MainScreen.DiscoveryPark.name) {
                 DiscoveryParkScreen(
-                    discoveryParkGrillRoute = { navController.navigate(MainScreen.DiscoveryPark.name) },
+                    discoveryParkGrillRoute = { navController.navigate(MainScreen.Menu.name) },
                     discoveryParkStarbucksRoute = { navController.navigate(MainScreen.DiscoveryPark.name)},
+                    Navigation = { navController.navigate(MainScreen.Menu.name)},
                     modifier = Modifier
                         .fillMaxSize()
                         .background(Color.White)
@@ -131,6 +134,15 @@ fun MainScreenApp(
                     WhichWhichMenu = { navController.navigate(MainScreen.Other.name) },
                     modifier = Modifier
                         .fillMaxSize()
+                        .background(Color.White)
+
+                )
+            }
+            composable(route = MainScreen.Menu.name) {
+                MenuScreen(
+                    mapHandler,
+                    modifier = Modifier
+                        //.fillMaxSize()
                         .background(Color.White)
 
                 )
