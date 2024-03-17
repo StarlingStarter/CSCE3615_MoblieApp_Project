@@ -38,7 +38,7 @@ fun MenuScreen(
         ) {
 //            Button(onClick = discoveryParkStarbucksRoute) { Text(stringResource(R.string.Discovery_park_starbucks)) }
             Button(onClick = Navigation) {
-                Text(stringResource(R.string.Discovery_park_grill))
+                Text(stringResource(R.string.Navigation))
             }
         }
     }
