@@ -1,7 +1,42 @@
 <resources>
     <string name="app_name">CSCE3615_MoblieApp_Project</string>
-    <string name="avesta">Avesta</string>
-    <string name="main_campus">Main Campus menu screen</string>
+
     <string name="output1">The button has not been pressed</string>
     <string name="output2">The button has been pressed</string>
+
+
+    <string name="Discovery_park">discovery park</string>
+    <string name="Discovery_park_grill">discovery park grill menu</string>
+    <string name="Discovery_park_starbucks">discovery park Starbucks menu</string>
+
+    <string name="main_campus">Main Campus</string>
+
+    <string name="DiningHalls">Dining Halls</string>
+    <string name="Bruceteria">Bruceteria Menu</string>
+    <string name="Champs">Champs Menu</string>
+    <string name="Eagle_landing">Eagle Landing Menu</string>
+    <string name="Kitchen_West">Kitchen West Menu</string>
+    <string name="Mean_Green_Cafe">Dining Halls Menu</string>
+
+    <string name="Union">Union</string>
+    <string name="Avesta">Avesta</string>
+    <string name="Burger_King">Burger King</string>
+    <string name="Campus_Chat_Food_Court">Campus Chat Food Court</string>
+    <string name="Chick_fil_a">Chick-fil-a</string>
+    <string name="fuzzys_Taco_Shop">Fuzzys Taco Shop</string>
+    <string name="Jamba">Jamba</string>
+    <string name="Krispy_Kruch_Chicken">Krispy Kruch Chicken</string>
+    <string name="Starbucks">Starbucks</string>
+    <string name="Verde_Everyday_Express">Verde Everyday Express</string>
+
+
+    <string name="Other">Other</string>
+    <string name="Cafe_GAB">Cafe GAB</string>
+    <string name="Einstein_Bros_Bagels">Einstein Bros Bagels</string>
+    <string name="Starbucks_Stand">Starbucks Stand</string>
+    <string name="The_Market_By_Clark_Bakery">The Market By Clark Bakery</string>
+    <string name="Which_Which">Which Which</string>
+
+    <string name="Navigation">Navigate</string>
+
 </resources>
