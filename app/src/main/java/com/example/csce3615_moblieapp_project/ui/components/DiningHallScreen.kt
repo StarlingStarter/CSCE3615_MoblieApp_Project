@@ -23,11 +23,11 @@ import com.example.csce3615_moblieapp_project.R
 
 @Composable
 fun DiningHallScreen(
-    bruceteriaMenu:() -> Unit,
-    champsMenu:() -> Unit,
-    eagleLandingMenu:() -> Unit,
-    kitcheWestMenu:() -> Unit,
-    meanGreenCafeMenu:() -> Unit,
+    bruceteriaMenu:(String) -> Unit,
+    champsMenu:(String) -> Unit,
+    eagleLandingMenu:(String) -> Unit,
+    kitcheWestMenu:(String) -> Unit,
+    meanGreenCafeMenu:(String) -> Unit,
     modifier: Modifier = Modifier
 ) {
     Column(
@@ -52,35 +52,35 @@ fun DiningHallScreen(
                     modifier = Modifier
                         .height(90.dp)
                         .width(216.dp)
-                        .clickable(onClick = bruceteriaMenu))
+                        .clickable(onClick = { bruceteriaMenu("Bruce%20Hall%2C%201624%20Chestnut%20St%2C%20Denton%2C%20TX%2076201") }))
             }
             Box() {
                 Image(painter = painterResource(id = R.drawable.champs), contentDescription = null,
                     modifier = Modifier
                         .height(90.dp)
                         .width(216.dp)
-                        .clickable(onClick = champsMenu))
+                        .clickable(onClick = {champsMenu("1379%20S%20Bonnie%20Brae%20St%2C%20Denton%2C%20TX%2076207")}))
             }
             Box() {
                 Image(painter = painterResource(id = R.drawable.eagle_s_landing), contentDescription = null,
                     modifier = Modifier
                         .height(90.dp)
                         .width(216.dp)
-                        .clickable(onClick = eagleLandingMenu))
+                        .clickable(onClick = {eagleLandingMenu("%201416%20Maple%2C%20Denton%2C%20TX%2076201")}))
             }
             Box() {
                 Image(painter = painterResource(id = R.drawable.kitchen_west), contentDescription = null,
                     modifier = Modifier
                         .height(90.dp)
                         .width(216.dp)
-                        .clickable(onClick = kitcheWestMenu))
+                        .clickable(onClick = {kitcheWestMenu("West%20Hall%2C%20320%20N%20Texas%20Blvd%2C%20Denton%2C%20TX%2076201")}))
             }
             Box() {
                 Image(painter = painterResource(id = R.drawable.mean_green_cafe), contentDescription = null,
                     modifier = Modifier
                         .height(90.dp)
                         .width(216.dp)
-                        .clickable(onClick = meanGreenCafeMenu))
+                        .clickable(onClick = {meanGreenCafeMenu("902%20Avenue%20C%2C%20Denton%2C%20TX%2076201")}))
             }
 //            Button(onClick = bruceteriaMenu) { Text(stringResource(R.string.Bruceteria)) }
 //            Button(onClick = champsMenu) { Text(stringResource(R.string.Champs)) }

@@ -62,6 +62,7 @@ fun DiscoveryParkScreen(
                         .width(216.dp)
                         .clickable(onClick = discoveryParkStarbucksRoute))
             }
+
 //            Button(onClick = discoveryParkStarbucksRoute) { Text(stringResource(R.string.Discovery_park_starbucks)) }
         }
     }

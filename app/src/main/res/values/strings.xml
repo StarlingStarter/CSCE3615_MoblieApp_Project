@@ -13,6 +13,8 @@
 
     <string name="DiningHalls">Dining Halls</string>
     <string name="Bruceteria">Bruceteria Menu</string>
+    <string name="BruceteriaAdress">Bruce%20Hall%2C%201624%20Chestnut%20St%2C%20Denton%2C%20TX%2076201</string>
+
     <string name="Champs">Champs Menu</string>
     <string name="Eagle_landing">Eagle Landing Menu</string>
     <string name="Kitchen_West">Kitchen West Menu</string>

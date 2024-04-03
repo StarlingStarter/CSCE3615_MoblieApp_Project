@@ -1,5 +1,6 @@
 package com.example.csce3615_moblieapp_project.ui.components
 
+import android.util.Log
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.rememberScrollState
@@ -14,8 +15,11 @@ import androidx.navigation.compose.composable
 import androidx.navigation.compose.currentBackStackEntryAsState
 import androidx.navigation.compose.rememberNavController
 import androidx.compose.foundation.background
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
 import androidx.compose.ui.graphics.Color
 
+private const val TAG = "MainScreen";
 enum class MainScreen (){
     Start,
     DiscoveryPark,
@@ -26,11 +30,11 @@ enum class MainScreen (){
     Other,
     Navigation
 }
-
+var address: String = ""
 @Composable
 fun MainScreenApp(
     //viewModel: OrderViewModel = viewModel(),
-    mapHandler:() -> Unit,
+    mapHandler:(String) -> Unit,
     navController: NavHostController = rememberNavController()
 ) {
     // Get current back stack entry
@@ -50,7 +54,9 @@ fun MainScreenApp(
 //        }
     ) { innerPadding ->
         //val uiState by viewModel.uiState.collectAsState()
-
+        //
+        //var address = remember { mutableStateOf("") }
+        //address = "Bruce%20Hall%2C%201624%20Chestnut%20St%2C%20Denton%2C%20TX%2076201"
         NavHost(
             navController = navController,
             startDestination = MainScreen.Start.name,
@@ -99,11 +105,24 @@ fun MainScreenApp(
             }
             composable(route = MainScreen.DiningHall.name) {
                 DiningHallScreen(
-                    bruceteriaMenu = { navController.navigate(MainScreen.Menu.name) },
-                    champsMenu = { navController.navigate(MainScreen.Menu.name) },
-                    eagleLandingMenu = { navController.navigate(MainScreen.Menu.name) },
-                    kitcheWestMenu = { navController.navigate(MainScreen.Menu.name) },
-                    meanGreenCafeMenu = { navController.navigate(MainScreen.Menu.name) } ,
+                    bruceteriaMenu = {
+//                        Log.d(TAG, "IT=$it")
+                        address = it
+//                        Log.d(TAG, "Address=$address")
+                        navController.navigate(MainScreen.Menu.name) },
+
+                    champsMenu = {
+                        address = it
+                        navController.navigate(MainScreen.Menu.name) },
+                    eagleLandingMenu = {
+                        address = it
+                        navController.navigate(MainScreen.Menu.name) },
+                    kitcheWestMenu = {
+                        address = it
+                        navController.navigate(MainScreen.Menu.name) },
+                    meanGreenCafeMenu = {
+                        address = it
+                        navController.navigate(MainScreen.Menu.name) } ,
                     modifier = Modifier
                             .fillMaxSize()
                             .background(Color.White)
@@ -140,7 +159,9 @@ fun MainScreenApp(
             }
             composable(route = MainScreen.Menu.name) {
                 MenuScreen(
-                    mapHandler,
+                    navigatiorButton = {
+                        Log.d(TAG, "Address=${address}")
+                        mapHandler(address)},
                     modifier = Modifier
                         //.fillMaxSize()
                         .background(Color.White)

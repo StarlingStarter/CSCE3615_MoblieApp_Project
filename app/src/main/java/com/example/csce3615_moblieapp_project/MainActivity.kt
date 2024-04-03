@@ -2,17 +2,22 @@ package com.example.csce3615_moblieapp_project
 
 import android.content.ActivityNotFoundException
 import android.content.Intent
+import android.net.Uri
 import android.os.Bundle
+import android.util.Log
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import com.example.csce3615_moblieapp_project.ui.components.MainScreenApp
-
+private const val TAG = "MainActivity";
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
-            MainScreenApp({Intent(Intent.ACTION_MAIN).also {
-//                it.`package`="com.google.android.youtube"
+            MainScreenApp(
+                {
+                    Log.d(TAG, "coordinates=$it")
+                    val uri = Uri.parse("google.navigation:q=$it&mode=d")
+                    Intent(Intent.ACTION_VIEW,uri).also {
                 it.`package`="com.google.android.apps.maps"
                 try {
                     startActivity(it)
