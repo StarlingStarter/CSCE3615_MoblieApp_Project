@@ -30,7 +30,7 @@ fun UnionScreen(
     JambaMenu:() -> Unit,
     KrispyKrunchChicken:() -> Unit,
     Starbucks:() -> Unit,
-    VerdeEverydday:() -> Unit,
+    VerdeEveryday:() -> Unit,
     modifier: Modifier = Modifier
 ) {
     Column(
@@ -111,7 +111,7 @@ fun UnionScreen(
                     modifier = Modifier
                         .height(90.dp)
                         .width(216.dp)
-                        .clickable(onClick = VerdeEverydday))
+                        .clickable(onClick = VerdeEveryday))
             }
 //            Button(onClick = AvestaMenu) { Text(stringResource(R.string.Avesta)) }
 //            Button(onClick = BurgerKingMenu) { Text(stringResource(R.string.Burger_King)) }

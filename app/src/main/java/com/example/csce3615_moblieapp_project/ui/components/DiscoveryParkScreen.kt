@@ -26,8 +26,8 @@ import com.example.csce3615_moblieapp_project.R
 
 @Composable
 fun DiscoveryParkScreen(
-    discoveryParkGrillRoute:() -> Unit,
-    discoveryParkStarbucksRoute:() -> Unit,
+    discoveryParkGrillRoute:(String) -> Unit,
+    discoveryParkStarbucksRoute:(String) -> Unit,
     Navigation:() -> Unit,
     modifier: Modifier = Modifier
 ) {
@@ -53,14 +53,14 @@ fun DiscoveryParkScreen(
                     modifier = Modifier
                         .height(90.dp)
                         .width(216.dp)
-                        .clickable(onClick = discoveryParkGrillRoute))
+                        .clickable(onClick = {discoveryParkGrillRoute("3940%20N%20Elm%20St%2C%20Denton%2C%20TX%2076207")}))
             }
             Box() {
                 Image(painter = painterResource(id = R.drawable.starbucks_dp), contentDescription = null,
                     modifier = Modifier
                         .height(90.dp)
                         .width(216.dp)
-                        .clickable(onClick = discoveryParkStarbucksRoute))
+                        .clickable(onClick = {discoveryParkStarbucksRoute("3940%20N%20Elm%20St%2C%20Denton%2C%20TX%2076207")}))
             }
 
 //            Button(onClick = discoveryParkStarbucksRoute) { Text(stringResource(R.string.Discovery_park_starbucks)) }

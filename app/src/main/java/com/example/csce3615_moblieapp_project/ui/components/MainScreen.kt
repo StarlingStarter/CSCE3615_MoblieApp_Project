@@ -95,8 +95,12 @@ fun MainScreenApp(
             }
             composable(route = MainScreen.DiscoveryPark.name) {
                 DiscoveryParkScreen(
-                    discoveryParkGrillRoute = { navController.navigate(MainScreen.Menu.name) },
-                    discoveryParkStarbucksRoute = { navController.navigate(MainScreen.DiscoveryPark.name)},
+                    discoveryParkGrillRoute = {
+                        address = it
+                        navController.navigate(MainScreen.Menu.name) },
+                    discoveryParkStarbucksRoute = {
+                        address = it
+                        navController.navigate(MainScreen.DiscoveryPark.name)},
                     Navigation = { navController.navigate(MainScreen.Menu.name)},
                     modifier = Modifier
                         .fillMaxSize()
@@ -138,7 +142,7 @@ fun MainScreenApp(
                     JambaMenu = { navController.navigate(MainScreen.Union.name) },
                     KrispyKrunchChicken = { navController.navigate(MainScreen.Union.name) },
                     Starbucks = { navController.navigate(MainScreen.Union.name) },
-                    VerdeEverydday = { navController.navigate(MainScreen.Union.name) },
+                    VerdeEveryday = { navController.navigate(MainScreen.Union.name) },
                     modifier = Modifier
                         .fillMaxSize()
                         .background(Color.White)
