@@ -18,6 +18,8 @@ import androidx.compose.foundation.background
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.ui.graphics.Color
+import com.example.csce3615_moblieapp_project.ui.data.DataSource
+import com.example.csce3615_moblieapp_project.ui.data.RetailMenuItems
 
 private const val TAG = "MainScreen";
 enum class MainScreen (){
@@ -26,6 +28,7 @@ enum class MainScreen (){
     MainCampus,
     DiningHall,
     Menu,
+    RetailMenu,
     Union,
     Other,
     Navigation
@@ -97,10 +100,11 @@ fun MainScreenApp(
                 DiscoveryParkScreen(
                     discoveryParkGrillRoute = {
                         address = it
-                        navController.navigate(MainScreen.Menu.name) },
+                        navController.navigate(MainScreen.RetailMenu.name) },
                     discoveryParkStarbucksRoute = {
                         address = it
-                        navController.navigate(MainScreen.DiscoveryPark.name)},
+                        navController.navigate(MainScreen.RetailMenu.name)},
+
                     Navigation = { navController.navigate(MainScreen.Menu.name)},
                     modifier = Modifier
                         .fillMaxSize()
@@ -168,9 +172,21 @@ fun MainScreenApp(
                         mapHandler(address)},
                     modifier = Modifier
                         //.fillMaxSize()
-                        .background(Color.White)
+                        .background(Color.Blue)
 
                 )
+            }
+            composable(route = MainScreen.RetailMenu.name) {
+                RetailMenu(
+//                    navigatiorButton = {
+//                        Log.d(TAG, "Address=${address}")
+//                        mapHandler(address)},
+//                    modifier = Modifier
+//                        //.fillMaxSize()
+//                        .background(Color.White)
+//
+//                )
+            DataSource.dpGrill)
             }
         }
     }
