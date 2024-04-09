@@ -64,31 +64,26 @@ fun RetailMenu(retailMenuList: List<RetailMenuItems>)
                 modifier = Modifier.fillMaxWidth()
             )
         }
+        }
         LazyColumn(
             modifier = Modifier.fillMaxWidth(),
-            contentPadding = PaddingValues(16.dp)
+            contentPadding = PaddingValues(16.dp),
+            userScrollEnabled = false
         ) {
-
+            item {
+                Row(
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .wrapContentHeight()
+                        .padding(vertical = 25.dp),
+                    horizontalArrangement = Arrangement.Center,
+                    verticalAlignment = Alignment.CenterVertically
+                ) {
+                    Text("\uD83C\uDF3F  Test output")
+                }
+            }
+            items(items=retailMenuList){item->
+                RetailCard(item = item)
+            }
         }
-//        LazyColumn(
-//            modifier = Modifier.fillMaxWidth(),
-//            contentPadding = PaddingValues(16.dp)
-//        ) {
-////            item {
-////                Row(
-////                    modifier = Modifier
-////                        .fillMaxWidth()
-////                        .wrapContentHeight()
-////                        .padding(vertical = 25.dp),
-////                    horizontalArrangement = Arrangement.Center,
-////                    verticalAlignment = Alignment.CenterVertically
-////                ) {
-////                    Text("\uD83C\uDF3F  Test output")
-////                }
-////            }
-//            items(items=retailMenuList){item->
-//                RetailCard(item = item)
-//            }
-//        }
-    }
 }

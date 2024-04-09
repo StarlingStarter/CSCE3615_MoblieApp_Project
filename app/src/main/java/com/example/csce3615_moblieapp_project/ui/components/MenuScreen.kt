@@ -33,14 +33,7 @@ fun MenuScreen(
         ) {
 //            Button(onClick = discoveryParkStarbucksRoute) { Text(stringResource(R.string.Discovery_park_starbucks)) }
             Column {
-                LazyColumn(
-                    modifier = Modifier.fillMaxWidth(),
-                    contentPadding = PaddingValues(16.dp)
-                ) {
-                    items(items = DataSource.dpGrill) {
-                        item -> Text(text = item.name)
-                    }
-                }
+
                 Button(onClick = navigatiorButton) {
                     Text(stringResource(R.string.Navigation))
                 }
