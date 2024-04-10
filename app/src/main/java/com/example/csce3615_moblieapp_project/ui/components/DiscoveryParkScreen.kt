@@ -22,12 +22,16 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import androidx.core.content.ContextCompat.startActivity
 import com.example.csce3615_moblieapp_project.R
+import com.example.csce3615_moblieapp_project.ui.data.DataSource
+import com.example.csce3615_moblieapp_project.ui.data.LocationAndMenu
+import com.example.csce3615_moblieapp_project.ui.data.RetailMenuItems
 
 
 @Composable
 fun DiscoveryParkScreen(
-    discoveryParkGrillRoute:(String) -> Unit,
-    discoveryParkStarbucksRoute:(String) -> Unit,
+//    discoveryParkGrillRoute:(String/*,List<RetailMenuItems>*/) -> Unit,
+    discoveryParkGrillRoute:(LocationAndMenu) -> Unit,
+    discoveryParkStarbucksRoute:(LocationAndMenu) -> Unit,
     Navigation:() -> Unit,
     modifier: Modifier = Modifier
 ) {
@@ -53,14 +57,15 @@ fun DiscoveryParkScreen(
                     modifier = Modifier
                         .height(90.dp)
                         .width(216.dp)
-                        .clickable(onClick = {discoveryParkGrillRoute("3940%20N%20Elm%20St%2C%20Denton%2C%20TX%2076207")}))
+//                        .clickable(onClick = {discoveryParkGrillRoute("3940%20N%20Elm%20St%2C%20Denton%2C%20TX%2076207", DataSource.dpGrill)}))
+                        .clickable(onClick = {discoveryParkGrillRoute(LocationAndMenu("3940%20N%20Elm%20St%2C%20Denton%2C%20TX%2076207",DataSource.dpGrill))}))
             }
             Box() {
                 Image(painter = painterResource(id = R.drawable.starbucks_dp), contentDescription = null,
                     modifier = Modifier
                         .height(90.dp)
                         .width(216.dp)
-                        .clickable(onClick = {discoveryParkStarbucksRoute("3940%20N%20Elm%20St%2C%20Denton%2C%20TX%2076207")}))
+                        .clickable(onClick = {discoveryParkStarbucksRoute(LocationAndMenu("3940%20N%20Elm%20St%2C%20Denton%2C%20TX%2076207",DataSource.dpStarbuck))}))
             }
 
 //            Button(onClick = discoveryParkStarbucksRoute) { Text(stringResource(R.string.Discovery_park_starbucks)) }

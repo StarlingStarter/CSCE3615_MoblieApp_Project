@@ -34,6 +34,9 @@ enum class MainScreen (){
     Navigation
 }
 var address: String = ""
+var menu: List<RetailMenuItems> = DataSource.dpGrill
+//var DPGrill: List<RetailMenuItems> = DataSource.dpGrill
+//var DPStarbucks: List<RetailMenuItems> = DataSource.dpStarbuck
 @Composable
 fun MainScreenApp(
     //viewModel: OrderViewModel = viewModel(),
@@ -99,10 +102,12 @@ fun MainScreenApp(
             composable(route = MainScreen.DiscoveryPark.name) {
                 DiscoveryParkScreen(
                     discoveryParkGrillRoute = {
-                        address = it
+                        menu = it.menu
+                        address = it.address
                         navController.navigate(MainScreen.RetailMenu.name) },
                     discoveryParkStarbucksRoute = {
-                        address = it
+                        menu = it.menu
+                        address = it.address
                         navController.navigate(MainScreen.RetailMenu.name)},
 
                     Navigation = { navController.navigate(MainScreen.Menu.name)},
@@ -172,12 +177,23 @@ fun MainScreenApp(
                         mapHandler(address)},
                     modifier = Modifier
                         //.fillMaxSize()
-                        .background(Color.Blue)
+                        .background(Color.White)
 
                 )
             }
             composable(route = MainScreen.RetailMenu.name) {
                 RetailMenu(
+                    navigatiorButton = {
+                        Log.d(TAG, "Address=${address}")
+                        mapHandler(address)},
+                    menu
+                )
+            }
+        }
+    }
+}
+
+//                 (
 //                    navigatiorButton = {
 //                        Log.d(TAG, "Address=${address}")
 //                        mapHandler(address)},
@@ -186,8 +202,3 @@ fun MainScreenApp(
 //                        .background(Color.White)
 //
 //                )
-            DataSource.dpGrill)
-            }
-        }
-    }
-}

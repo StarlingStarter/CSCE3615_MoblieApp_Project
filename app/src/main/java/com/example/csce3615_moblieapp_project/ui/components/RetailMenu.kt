@@ -6,6 +6,7 @@ import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
@@ -34,8 +35,7 @@ import com.example.csce3615_moblieapp_project.ui.data.RetailMenuItems
 
 //@Composable
 //fun RetailMenu(
-//    navigatiorButton: () -> Unit,
-//    modifier: Modifier = Modifier
+
 //){
 //    Column(
 //        modifier = modifier,
@@ -48,26 +48,61 @@ import com.example.csce3615_moblieapp_project.ui.data.RetailMenuItems
 ////            verticalArrangement = Arrangement.spacedBy(dimensionResource(R.dimen.padding_small))
 //        ) {
 ////            Button(onClick = discoveryParkStarbucksRoute) { Text(stringResource(R.string.Discovery_park_starbucks)) }
-//            Button(onClick = navigatiorButton) {
-//                Text(stringResource(R.string.Navigation))
-//            }
+
 //        }
 //    }
 //}
 @Composable
-fun RetailMenu(retailMenuList: List<RetailMenuItems>)
-{
+fun RetailMenu(
+    navigatiorButton: () -> Unit,
+    retailMenuList: List<RetailMenuItems>,
+    modifier: Modifier = Modifier
+) {
     Log.d("RetailMenu", "The Retail Menu")
-    Column {
-        Row{
-            Image(
-                painter = painterResource(id = R.drawable.image_home_page_header),
-                contentDescription = null,
-                contentScale = ContentScale.FillWidth,
-                alpha = 1f,
-                modifier = Modifier.fillMaxWidth()
-            )
+    Column(
+//        modifier = Modifier.fillMaxHeight()
+    ) {
+        LazyColumn(
+            modifier = Modifier
+                .height(900.dp),
+//                .fillMaxHeight(),
+                contentPadding = PaddingValues(16.dp),
+        ) {
+            item {
+                Row(
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .wrapContentHeight()
+                        .padding(vertical = 25.dp),
+                    horizontalArrangement = Arrangement.Center,
+                    verticalAlignment = Alignment.CenterVertically
+                ) {
+                    //Text("\uD83C\uDF3F  ")
+                    Button(onClick = navigatiorButton) {
+                        Text(stringResource(R.string.Navigation))
+                    }
+                }
+            }
+            items(items=retailMenuList){item->
+                RetailCard(item = item)
+
+            }
+
         }
+    }
+}
+
+
+
+//        Row{
+//            Image(
+//                painter = painterResource(id = R.drawable.image_home_page_header),
+//                contentDescription = null,
+//                contentScale = ContentScale.FillWidth,
+//                alpha = 1f,
+//                modifier = Modifier.fillMaxWidth()
+//            )
+//        }
 //            //burgers
 //            RetailCard(RetailMenuItems(0, "Single Cheese Burger ","Price: 2.50"));
 //            RetailCard(RetailMenuItems(0, "Single Veggie Burger ","Price: 2.50"));
@@ -112,27 +147,3 @@ fun RetailMenu(retailMenuList: List<RetailMenuItems>)
 //
 //            //Paneer  Butter Masala
 //            RetailCard(RetailMenuItems(0, "Paneer Butter Masala ","Price: 6.75"));
-
-        }
-        LazyColumn(
-            modifier = Modifier
-            .height(100.dp),
-            contentPadding = PaddingValues(16.dp),
-        ) {
-            item {
-                Row(
-                    modifier = Modifier
-                        .fillMaxWidth()
-                        .wrapContentHeight()
-                        .padding(vertical = 25.dp),
-                    horizontalArrangement = Arrangement.Center,
-                    verticalAlignment = Alignment.CenterVertically
-                ) {
-                    Text("\uD83C\uDF3F  ")
-                }
-            }
-            items(items=retailMenuList){item->
-                RetailCard(item = item)
-            }
-        }
-}

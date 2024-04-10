@@ -29,11 +29,12 @@ fun RetailCard(item: RetailMenuItems){
         Row(
             verticalAlignment = Alignment.CenterVertically
         ){
+//            Text(text = "please note most of these menu's contain a portion of a location offers, and will be completed future updates")
            // Text(text = item.name)
             Text(text = item.name)
-//            Text(text = item.description)
-//            Text(text = "\n")
-//
+        }
+        Row(){
+            Text(text = item.description)
         }
         Row(){
             Text(text = item.price)
