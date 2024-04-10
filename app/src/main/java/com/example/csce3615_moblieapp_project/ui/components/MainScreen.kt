@@ -143,15 +143,49 @@ fun MainScreenApp(
             }
             composable(route = MainScreen.Union.name) {
                 UnionScreen(
-                    AvestaMenu = { navController.navigate(MainScreen.Union.name) },
-                    BurgerKingMenu = { navController.navigate(MainScreen.Union.name) },
-                    CampusChatMenu = { navController.navigate(MainScreen.Union.name) },
-                    ChickfilAMenu = { navController.navigate(MainScreen.Union.name) },
-                    FuzzyTacoMenu = { navController.navigate(MainScreen.Union.name) },
-                    JambaMenu = { navController.navigate(MainScreen.Union.name) },
-                    KrispyKrunchChicken = { navController.navigate(MainScreen.Union.name) },
-                    Starbucks = { navController.navigate(MainScreen.Union.name) },
-                    VerdeEveryday = { navController.navigate(MainScreen.Union.name) },
+                    AvestaMenu = {
+                        menu = it.menu
+                        address = it.address
+                        navController.navigate(MainScreen.RetailMenu.name) },
+
+                    BurgerKingMenu = {
+                        menu = it.menu
+                        address = it.address
+                        navController.navigate(MainScreen.RetailMenu.name) },
+                    CampusChatMenu = {
+                        menu = it.menu
+                        address = it.address
+                        navController.navigate(MainScreen.RetailMenu.name) },
+                    ChickfilAMenu = {
+                        menu = it.menu
+                        address = it.address
+                        navController.navigate(MainScreen.RetailMenu.name) },
+
+                    FuzzyTacoMenu = {
+                        menu = it.menu
+                        address = it.address
+                        navController.navigate(MainScreen.RetailMenu.name) },
+
+                    JambaMenu = {
+                        menu = it.menu
+                        address = it.address
+                        navController.navigate(MainScreen.RetailMenu.name) },
+
+                    KrispyKrunchChicken = {
+                        menu = it.menu
+                        address = it.address
+                        navController.navigate(MainScreen.RetailMenu.name) },
+
+                    Starbucks = {
+                        menu = it.menu
+                        address = it.address
+                        navController.navigate(MainScreen.RetailMenu.name) },
+
+                    VerdeEveryday = {
+                        menu = it.menu
+                        address = it.address
+                        navController.navigate(MainScreen.RetailMenu.name) },
+
                     modifier = Modifier
                         .fillMaxSize()
                         .background(Color.White)
@@ -159,11 +193,26 @@ fun MainScreenApp(
             }
             composable(route = MainScreen.Other.name) {
                 OtherScreen(
-                    cafeGABMenu = { navController.navigate(MainScreen.Other.name) },
-                    EinsteinBrosBagels = { navController.navigate(MainScreen.Other.name) },
-                    StarbucksStand = { navController.navigate(MainScreen.Other.name) },
-                    TheMarketByClarkBakery = { navController.navigate(MainScreen.Other.name) },
-                    WhichWhichMenu = { navController.navigate(MainScreen.Other.name) },
+                    cafeGABMenu = {
+                        menu = it.menu
+                        address = it.address
+                        navController.navigate(MainScreen.RetailMenu.name) },
+                    EinsteinBrosBagels = {
+                        menu = it.menu
+                        address = it.address
+                        navController.navigate(MainScreen.RetailMenu.name) },
+                    StarbucksStand = {
+                        menu = it.menu
+                        address = it.address
+                        navController.navigate(MainScreen.RetailMenu.name) },
+                    TheMarketByClarkBakery = {
+                        menu = it.menu
+                        address = it.address
+                        navController.navigate(MainScreen.RetailMenu.name) },
+                    WhichWhichMenu = {
+                        menu = it.menu
+                        address = it.address
+                        navController.navigate(MainScreen.RetailMenu.name) },
                     modifier = Modifier
                         .fillMaxSize()
                         .background(Color.White)

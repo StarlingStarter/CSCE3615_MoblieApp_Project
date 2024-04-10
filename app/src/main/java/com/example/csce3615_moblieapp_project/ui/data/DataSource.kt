@@ -96,7 +96,7 @@ object DataSource {
     )
 
     val AvestaMenu = listOf(
-        RetailMenuItems(0, "Discovery Perks Grill & salad Bar","All items come without toppings. Please add toppings to your meal in the kiosk"," "),
+        RetailMenuItems(0, "Avesta Menu","Will be updated in a later patch"," "),
     )
     val BurgerKingMenu = listOf(
         RetailMenuItems(0, "original Chicken Sandwich","Lightly breaded chicken topped with crisp lettuce and creamy mayonnaise on a sesame seed bun.","$5.99"),
@@ -152,18 +152,35 @@ object DataSource {
         RetailMenuItems(9, "Chocolate Fudge Brownie","A decadent dessert treat with rich semi-sweet chocolate melted into the batter and fury chunks","$2.25"),
     )
     val FuzzyTacoMenu = listOf(
-        RetailMenuItems(0, "Discovery Perks Grill & salad Bar","All items come without toppings. Please add toppings to your meal in the kiosk"," "),
+        RetailMenuItems(0, "Fuzzy Taco Menu","Will be updated in a later patch"," "),
     )
     val JambaMenu = listOf(
-        RetailMenuItems(0, "Discovery Perks Grill & salad Bar","All items come without toppings. Please add toppings to your meal in the kiosk"," "),
+        RetailMenuItems(0, "Jamba Juice Menu","Will be updated in a later patch"," "),
     )
     val KrispyKrunchChickenMenu = listOf(
-        RetailMenuItems(0, "Discovery Perks Grill & salad Bar","All items come without toppings. Please add toppings to your meal in the kiosk"," "),
+        RetailMenuItems(0, "Krispy Krunch Menu","Will be updated in a later patch"," "),
     )
     val StarbucksMenu = listOf(
-        RetailMenuItems(0, "Discovery Perks Grill & salad Bar","All items come without toppings. Please add toppings to your meal in the kiosk"," "),
+        RetailMenuItems(0, "Starbuck Menu","Will be updated in a later patch"," "),
     )
     val verdeEverydayMenu = listOf(
-        RetailMenuItems(0, "Discovery Perks Grill & salad Bar","All items come without toppings. Please add toppings to your meal in the kiosk"," "),
+        RetailMenuItems(0, "Verde Everday Menu" ,"Will be updated in a later patch"," "),
+    )
+    val cafeGABMenu = listOf(
+        RetailMenuItems(0, "cafe GAB ","Will be updated in a later patch"," "),
+    )
+    val bagleAMenu = listOf(
+        RetailMenuItems(0, "Einstein Bagles bros","Will be updated in a later patch"," "),
+    )
+    val StarbuckStandMenu = listOf(
+        RetailMenuItems(0, "Starbucks Stand","Will be updated in a later patch"," "),
+    )
+
+    val marketMenu = listOf(
+        RetailMenuItems(0, "The Market by Clark Bakery","Will be updated in a later patch"," "),
+    )
+
+    val WhichWichMenu = listOf(
+        RetailMenuItems(0, "Which Which","Will be updated in a later patch"," "),
     )
 }

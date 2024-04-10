@@ -19,18 +19,20 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.ViewModel
 import com.example.csce3615_moblieapp_project.R
+import com.example.csce3615_moblieapp_project.ui.data.DataSource
+import com.example.csce3615_moblieapp_project.ui.data.LocationAndMenu
 
 @Composable
 fun UnionScreen(
-    AvestaMenu:() -> Unit,
-    BurgerKingMenu:() -> Unit,
-    CampusChatMenu:() -> Unit,
-    ChickfilAMenu:() -> Unit,
-    FuzzyTacoMenu:() -> Unit,
-    JambaMenu:() -> Unit,
-    KrispyKrunchChicken:() -> Unit,
-    Starbucks:() -> Unit,
-    VerdeEveryday:() -> Unit,
+    AvestaMenu:(LocationAndMenu) -> Unit,
+    BurgerKingMenu:(LocationAndMenu) -> Unit,
+    CampusChatMenu:(LocationAndMenu) -> Unit,
+    ChickfilAMenu:(LocationAndMenu) -> Unit,
+    FuzzyTacoMenu:(LocationAndMenu) -> Unit,
+    JambaMenu:(LocationAndMenu) -> Unit,
+    KrispyKrunchChicken:(LocationAndMenu) -> Unit,
+    Starbucks:(LocationAndMenu) -> Unit,
+    VerdeEveryday:(LocationAndMenu) -> Unit,
     modifier: Modifier = Modifier
 ) {
     Column(
@@ -55,63 +57,63 @@ fun UnionScreen(
                     modifier = Modifier
                         .height(90.dp)
                         .width(216.dp)
-                        .clickable(onClick = AvestaMenu))
+                        .clickable(onClick = {AvestaMenu(LocationAndMenu("1155%20Union%20Cir%2C%20Denton%2C%20TX%2076203", DataSource.AvestaMenu))}))
             }
             Box() {
                 Image(painter = painterResource(id = R.drawable.burger_king), contentDescription = null,
                     modifier = Modifier
                         .height(90.dp)
                         .width(216.dp)
-                        .clickable(onClick = BurgerKingMenu))
+                        .clickable(onClick = { BurgerKingMenu(LocationAndMenu("1155%20Union%20Cir%2C%20Denton%2C%20TX%2076203", DataSource.BurgerKingMenu)) }))
             }
             Box() {
                 Image(painter = painterResource(id = R.drawable.campus_chat_food_court), contentDescription = null,
                     modifier = Modifier
                         .height(90.dp)
                         .width(216.dp)
-                        .clickable(onClick = CampusChatMenu))
+                        .clickable(onClick = { CampusChatMenu(LocationAndMenu("1155%20Union%20Cir%2C%20Denton%2C%20TX%2076203", DataSource.CampusChatMenu)) }))
             }
             Box() {
                 Image(painter = painterResource(id = R.drawable.chick_fil_a), contentDescription = null,
                     modifier = Modifier
                         .height(90.dp)
                         .width(216.dp)
-                        .clickable(onClick = ChickfilAMenu))
+                        .clickable(onClick = { ChickfilAMenu(LocationAndMenu("1155%20Union%20Cir%2C%20Denton%2C%20TX%2076203", DataSource.ChickFilaMenu)) }))
             }
             Box() {
                 Image(painter = painterResource(id = R.drawable.fuzzy_s_taco_shop), contentDescription = null,
                     modifier = Modifier
                         .height(90.dp)
                         .width(216.dp)
-                        .clickable(onClick = FuzzyTacoMenu))
+                        .clickable(onClick = {FuzzyTacoMenu(LocationAndMenu("1155%20Union%20Cir%2C%20Denton%2C%20TX%2076203", DataSource.FuzzyTacoMenu))}))
             }
             Box() {
                 Image(painter = painterResource(id = R.drawable.jamba), contentDescription = null,
                     modifier = Modifier
                         .height(90.dp)
                         .width(216.dp)
-                        .clickable(onClick = JambaMenu))
+                        .clickable(onClick = {JambaMenu(LocationAndMenu("1155%20Union%20Cir%2C%20Denton%2C%20TX%2076203", DataSource.JambaMenu))}))
             }
             Box() {
                 Image(painter = painterResource(id = R.drawable.krispykrunchchicken), contentDescription = null,
                     modifier = Modifier
                         .height(90.dp)
                         .width(216.dp)
-                        .clickable(onClick = KrispyKrunchChicken))
+                        .clickable(onClick = {KrispyKrunchChicken(LocationAndMenu("1155%20Union%20Cir%2C%20Denton%2C%20TX%2076203", DataSource.KrispyKrunchChickenMenu))}))
             }
             Box() {
                 Image(painter = painterResource(id = R.drawable.starbucks_union), contentDescription = null,
                     modifier = Modifier
                         .height(90.dp)
                         .width(216.dp)
-                        .clickable(onClick = Starbucks))
+                        .clickable(onClick = {Starbucks(LocationAndMenu("1155%20Union%20Cir%2C%20Denton%2C%20TX%2076203", DataSource.StarbucksMenu))}))
             }
             Box() {
                 Image(painter = painterResource(id = R.drawable.verde_everyday_express), contentDescription = null,
                     modifier = Modifier
                         .height(90.dp)
                         .width(216.dp)
-                        .clickable(onClick = VerdeEveryday))
+                        .clickable(onClick = {VerdeEveryday(LocationAndMenu("1155%20Union%20Cir%2C%20Denton%2C%20TX%2076203", DataSource.verdeEverydayMenu))}))
             }
 //            Button(onClick = AvestaMenu) { Text(stringResource(R.string.Avesta)) }
 //            Button(onClick = BurgerKingMenu) { Text(stringResource(R.string.Burger_King)) }
