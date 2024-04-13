@@ -18,14 +18,16 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import com.example.csce3615_moblieapp_project.R
+import com.example.csce3615_moblieapp_project.ui.data.DataSource
+import com.example.csce3615_moblieapp_project.ui.data.LocationAndMenu
 
 @Composable
 fun OtherScreen(
-    cafeGABMenu:() -> Unit,
-    EinsteinBrosBagels:() -> Unit,
-    StarbucksStand:() -> Unit,
-    TheMarketByClarkBakery:() -> Unit,
-    WhichWhichMenu:() -> Unit,
+    cafeGABMenu:(LocationAndMenu) -> Unit,
+    EinsteinBrosBagels:(LocationAndMenu) -> Unit,
+    StarbucksStand:(LocationAndMenu) -> Unit,
+    TheMarketByClarkBakery:(LocationAndMenu) -> Unit,
+    WhichWhichMenu:(LocationAndMenu) -> Unit,
     modifier: Modifier = Modifier
 ) {
     Column(
@@ -50,35 +52,35 @@ fun OtherScreen(
                     modifier = Modifier
                         .height(90.dp)
                         .width(216.dp)
-                        .clickable(onClick = cafeGABMenu))
+                        .clickable(onClick = {cafeGABMenu(LocationAndMenu("1417%20Maple%20Street%20Denton%2C%20Texas%2076201",DataSource.cafeGABMenu))}))
             }
             Box() {
                 Image(painter = painterResource(id = R.drawable.einsteins_bros), contentDescription = null,
                     modifier = Modifier
                         .height(90.dp)
                         .width(216.dp)
-                        .clickable(onClick = EinsteinBrosBagels))
+                        .clickable(onClick = {EinsteinBrosBagels(LocationAndMenu("1201%20W.%20Mulberry%20St.%2C%20Art%20Building%2C%20Room%20101",DataSource.bagleAMenu))}))
             }
             Box() {
                 Image(painter = painterResource(id = R.drawable.starbucks_stand), contentDescription = null,
                     modifier = Modifier
                         .height(90.dp)
                         .width(216.dp)
-                        .clickable(onClick = StarbucksStand))
+                        .clickable(onClick = {StarbucksStand(LocationAndMenu("1501%20W%20Chestnut%20St%2C%20Denton%2C%20TX%2076201",DataSource.StarbuckStandMenu))}))
             }
             Box() {
                 Image(painter = painterResource(id = R.drawable.the_market_by_clark_bakery), contentDescription = null,
                     modifier = Modifier
                         .height(90.dp)
                         .width(216.dp)
-                        .clickable(onClick = TheMarketByClarkBakery))
+                        .clickable(onClick = {TheMarketByClarkBakery(LocationAndMenu("1416%20Maple%20St%2C%20Denton%2C%20TX%2076201%0A",DataSource.marketMenu))}))
             }
             Box() {
                 Image(painter = painterResource(id = R.drawable.which_wich), contentDescription = null,
                     modifier = Modifier
                         .height(90.dp)
                         .width(216.dp)
-                        .clickable(onClick = WhichWhichMenu))
+                        .clickable(onClick = {WhichWhichMenu(LocationAndMenu("",DataSource.WhichWichMenu))}))
             }
 //            Button(onClick = cafeGABMenu) { Text(stringResource(R.string.Cafe_GAB)) }
 //            Button(onClick = EinsteinBrosBagels) { Text(stringResource(R.string.Einstein_Bros_Bagels)) }
