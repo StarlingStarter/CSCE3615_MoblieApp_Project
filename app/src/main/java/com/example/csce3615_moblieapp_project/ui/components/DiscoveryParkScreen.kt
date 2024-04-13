@@ -1,8 +1,5 @@
 package com.example.csce3615_moblieapp_project.ui.components
 
-import android.content.ActivityNotFoundException
-import android.content.Intent
-import android.net.Uri
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
@@ -11,20 +8,16 @@ import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.width
-import androidx.compose.material3.Button
-import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
-import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
-import androidx.core.content.ContextCompat.startActivity
 import com.example.csce3615_moblieapp_project.R
-import com.example.csce3615_moblieapp_project.ui.data.DataSource
+import com.example.csce3615_moblieapp_project.ui.data.Menu.DPGrillDataSource
+import com.example.csce3615_moblieapp_project.ui.data.Menu.DPStarbucksDataSource
 import com.example.csce3615_moblieapp_project.ui.data.LocationAndMenu
-import com.example.csce3615_moblieapp_project.ui.data.RetailMenuItems
 
 
 @Composable
@@ -58,14 +51,16 @@ fun DiscoveryParkScreen(
                         .height(90.dp)
                         .width(216.dp)
 //                        .clickable(onClick = {discoveryParkGrillRoute("3940%20N%20Elm%20St%2C%20Denton%2C%20TX%2076207", DataSource.dpGrill)}))
-                        .clickable(onClick = {discoveryParkGrillRoute(LocationAndMenu("3940%20N%20Elm%20St%2C%20Denton%2C%20TX%2076207",DataSource.dpGrill))}))
+                        .clickable(onClick = {discoveryParkGrillRoute(LocationAndMenu("3940%20N%20Elm%20St%2C%20Denton%2C%20TX%2076207",
+                            DPGrillDataSource.dpGrill))}))
             }
             Box() {
                 Image(painter = painterResource(id = R.drawable.starbucks_dp), contentDescription = null,
                     modifier = Modifier
                         .height(90.dp)
                         .width(216.dp)
-                        .clickable(onClick = {discoveryParkStarbucksRoute(LocationAndMenu("3940%20N%20Elm%20St%2C%20Denton%2C%20TX%2076207",DataSource.dpStarbuck))}))
+                        .clickable(onClick = {discoveryParkStarbucksRoute(LocationAndMenu("3940%20N%20Elm%20St%2C%20Denton%2C%20TX%2076207",
+                            DPStarbucksDataSource.dpStarbuck))}))
             }
 
 //            Button(onClick = discoveryParkStarbucksRoute) { Text(stringResource(R.string.Discovery_park_starbucks)) }

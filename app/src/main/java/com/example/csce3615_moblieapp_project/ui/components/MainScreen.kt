@@ -15,10 +15,10 @@ import androidx.navigation.compose.composable
 import androidx.navigation.compose.currentBackStackEntryAsState
 import androidx.navigation.compose.rememberNavController
 import androidx.compose.foundation.background
-import androidx.compose.runtime.mutableStateOf
-import androidx.compose.runtime.remember
 import androidx.compose.ui.graphics.Color
-import com.example.csce3615_moblieapp_project.ui.data.DataSource
+import com.example.csce3615_moblieapp_project.ui.data.Menu.DPGrillDataSource
+import com.example.csce3615_moblieapp_project.ui.data.Menu.DPStarbucksDataSource
+import com.example.csce3615_moblieapp_project.ui.data.Menu.DataSource
 import com.example.csce3615_moblieapp_project.ui.data.RetailMenuItems
 
 private const val TAG = "MainScreen";
@@ -34,7 +34,7 @@ enum class MainScreen (){
     Navigation
 }
 var address: String = ""
-var menu: List<RetailMenuItems> = DataSource.dpGrill
+var menu: List<RetailMenuItems> = DPGrillDataSource.dpGrill
 //var DPGrill: List<RetailMenuItems> = DataSource.dpGrill
 //var DPStarbucks: List<RetailMenuItems> = DataSource.dpStarbuck
 @Composable
