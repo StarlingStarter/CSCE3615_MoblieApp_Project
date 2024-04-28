@@ -35,7 +35,7 @@ fun MainCampusScreen(
         Column(
             modifier = Modifier.fillMaxWidth(),
             horizontalAlignment = Alignment.CenterHorizontally,
-//            verticalArrangement = Arrangement.spacedBy(dimensionResource(R.dimen.padding_small))
+//           verticalArrangement = Arrangement.Bottom
         ) {
             Image(
                 painter = painterResource(id = R.drawable.unt_mc_header),
@@ -68,9 +68,10 @@ fun MainCampusScreen(
             Box() {
                 Image(painter = painterResource(id = R.drawable.unt_bottom), contentDescription = null,
                     modifier = Modifier
-                        .height(110.dp)
-                        .width(400.dp)
-                        .clickable(onClick = OtherRoute))
+                        .height(80.dp)
+                        .width(400.dp),
+                    Alignment.BottomCenter
+                )
             }
 //            Button(onClick = DiningHallRoute) { Text(stringResource(R.string.DiningHalls)) }
 //            Button(onClick = UnionRoute) { Text(stringResource(R.string.Union)) }

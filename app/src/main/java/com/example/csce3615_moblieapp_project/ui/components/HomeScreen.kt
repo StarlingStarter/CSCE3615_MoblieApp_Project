@@ -62,8 +62,9 @@ fun HomeScreen(
             Box() {
                 Image(painter = painterResource(id = R.drawable.unt_bottom), contentDescription = null,
                     modifier = Modifier
-                        .height(115.dp)
-                        .width(400.dp)
+                        .height(90.dp)
+                        .width(400.dp),
+                    Alignment.BottomCenter
                 )
             }
 //            Button(onClick = MainCampusRoute) { Text(stringResource(R.string.main_campus)) }

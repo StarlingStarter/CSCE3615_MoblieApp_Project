@@ -51,74 +51,82 @@ fun UnionScreen(
 //            verticalArrangement = Arrangement.spacedBy(dimensionResource(R.dimen.padding_small))
         ) {
             Image(
-                painter = painterResource(id = R.drawable.image_home_page_header),
+                painter = painterResource(id = R.drawable.unt_union_header),
                 contentDescription = null,
                 contentScale = ContentScale.FillWidth,
                 alpha = 1f,
                 modifier = Modifier.fillMaxWidth()
             )
             Box() {
-                Image(painter = painterResource(id = R.drawable.avesta), contentDescription = null,
+                Image(painter = painterResource(id = R.drawable.unt_avesta_button), contentDescription = null,
                     modifier = Modifier
-                        .height(90.dp)
-                        .width(216.dp)
+                        .height(70.dp)
+                        .width(280.dp)
                         .clickable(onClick = {AvestaMenu(LocationAndMenu("1155%20Union%20Cir%2C%20Denton%2C%20TX%2076203", AvestaDataSource.AvestaMenu))}))
             }
             Box() {
-                Image(painter = painterResource(id = R.drawable.burger_king), contentDescription = null,
+                Image(painter = painterResource(id = R.drawable.unt_burger_button), contentDescription = null,
                     modifier = Modifier
-                        .height(90.dp)
-                        .width(216.dp)
+                        .height(70.dp)
+                        .width(280.dp)
                         .clickable(onClick = { BurgerKingMenu(LocationAndMenu("1155%20Union%20Cir%2C%20Denton%2C%20TX%2076203", BurgerKingDataSource.BurgerKingMenu)) }))
             }
             Box() {
-                Image(painter = painterResource(id = R.drawable.campus_chat_food_court), contentDescription = null,
+                Image(painter = painterResource(id = R.drawable.unt_campus_button), contentDescription = null,
                     modifier = Modifier
-                        .height(90.dp)
-                        .width(216.dp)
+                        .height(70.dp)
+                        .width(280.dp)
                         .clickable(onClick = { CampusChatMenu(LocationAndMenu("1155%20Union%20Cir%2C%20Denton%2C%20TX%2076203", CampusChatDataSource.CampusChatMenu)) }))
             }
             Box() {
-                Image(painter = painterResource(id = R.drawable.chick_fil_a), contentDescription = null,
+                Image(painter = painterResource(id = R.drawable.unt_chick_button), contentDescription = null,
                     modifier = Modifier
-                        .height(90.dp)
-                        .width(216.dp)
+                        .height(70.dp)
+                        .width(280.dp)
                         .clickable(onClick = { ChickfilAMenu(LocationAndMenu("1155%20Union%20Cir%2C%20Denton%2C%20TX%2076203", ChickFilADataSource.ChickFilaMenu)) }))
             }
             Box() {
-                Image(painter = painterResource(id = R.drawable.fuzzy_s_taco_shop), contentDescription = null,
+                Image(painter = painterResource(id = R.drawable.unt_fuzzy_button), contentDescription = null,
                     modifier = Modifier
-                        .height(90.dp)
-                        .width(216.dp)
+                        .height(70.dp)
+                        .width(280.dp)
                         .clickable(onClick = {FuzzyTacoMenu(LocationAndMenu("1155%20Union%20Cir%2C%20Denton%2C%20TX%2076203", FuzzyTacoDataSource.FuzzyTacoMenu))}))
             }
             Box() {
-                Image(painter = painterResource(id = R.drawable.jamba), contentDescription = null,
+                Image(painter = painterResource(id = R.drawable.unt_jamba_button), contentDescription = null,
                     modifier = Modifier
-                        .height(90.dp)
-                        .width(216.dp)
+                        .height(70.dp)
+                        .width(280.dp)
                         .clickable(onClick = {JambaMenu(LocationAndMenu("1155%20Union%20Cir%2C%20Denton%2C%20TX%2076203", JambaJuiceDataSource.JambaMenu))}))
             }
             Box() {
-                Image(painter = painterResource(id = R.drawable.krispykrunchchicken), contentDescription = null,
+                Image(painter = painterResource(id = R.drawable.unt_krispy_button), contentDescription = null,
                     modifier = Modifier
-                        .height(90.dp)
-                        .width(216.dp)
+                        .height(70.dp)
+                        .width(280.dp)
                         .clickable(onClick = {KrispyKrunchChicken(LocationAndMenu("1155%20Union%20Cir%2C%20Denton%2C%20TX%2076203", KrispyKrunchDataSource.KrispyKrunchChickenMenu))}))
             }
             Box() {
-                Image(painter = painterResource(id = R.drawable.starbucks_union), contentDescription = null,
+                Image(painter = painterResource(id = R.drawable.unt_starbucks_button), contentDescription = null,
                     modifier = Modifier
-                        .height(90.dp)
-                        .width(216.dp)
+                        .height(70.dp)
+                        .width(280.dp)
                         .clickable(onClick = {Starbucks(LocationAndMenu("1155%20Union%20Cir%2C%20Denton%2C%20TX%2076203", StarbucksDataSource.StarbucksMenu))}))
             }
             Box() {
-                Image(painter = painterResource(id = R.drawable.verde_everyday_express), contentDescription = null,
+                Image(painter = painterResource(id = R.drawable.unt_verde_button), contentDescription = null,
                     modifier = Modifier
-                        .height(90.dp)
-                        .width(216.dp)
+                        .height(70.dp)
+                        .width(280.dp)
                         .clickable(onClick = {VerdeEveryday(LocationAndMenu("1155%20Union%20Cir%2C%20Denton%2C%20TX%2076203", VerdeEverydayDataSource.verdeEverydayMenu))}))
+            }
+            Box() {
+                Image(painter = painterResource(id = R.drawable.unt_bottom), contentDescription = null,
+                    modifier = Modifier
+                        .height(100.dp)
+                        .width(400.dp),
+                    Alignment.BottomCenter
+                    )
             }
 //            Button(onClick = AvestaMenu) { Text(stringResource(R.string.Avesta)) }
 //            Button(onClick = BurgerKingMenu) { Text(stringResource(R.string.Burger_King)) }

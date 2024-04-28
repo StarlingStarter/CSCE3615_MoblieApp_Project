@@ -88,8 +88,9 @@ fun DiningHallScreen(
                 Image(painter = painterResource(id = R.drawable.unt_bottom), contentDescription = null,
                     modifier = Modifier
                         .height(90.dp)
-                        .width(400.dp)
-                        .clickable(onClick = {meanGreenCafeMenu("902%20Avenue%20C%2C%20Denton%2C%20TX%2076201")}))
+                        .width(400.dp),
+                    Alignment.BottomCenter
+                )
             }
 //            Button(onClick = bruceteriaMenu) { Text(stringResource(R.string.Bruceteria)) }
 //            Button(onClick = champsMenu) { Text(stringResource(R.string.Champs)) }

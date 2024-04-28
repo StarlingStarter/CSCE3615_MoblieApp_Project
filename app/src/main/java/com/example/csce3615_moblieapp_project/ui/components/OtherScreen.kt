@@ -91,9 +91,10 @@ fun OtherScreen(
             Box() {
                 Image(painter = painterResource(id = R.drawable.unt_bottom), contentDescription = null,
                     modifier = Modifier
-                        .height(190.dp)
-                        .width(500.dp)
-                        .clickable(onClick = {WhichWhichMenu(LocationAndMenu("1416%20Maple%20St%2C%20Denton%2C%20TX%2076201%0A", WhichWhichDataSource.WhichWichMenu))}))
+                        .height(120.dp)
+                        .width(500.dp),
+                    Alignment.BottomCenter
+                )
             }
 //            Button(onClick = cafeGABMenu) { Text(stringResource(R.string.Cafe_GAB)) }
 //            Button(onClick = EinsteinBrosBagels) { Text(stringResource(R.string.Einstein_Bros_Bagels)) }

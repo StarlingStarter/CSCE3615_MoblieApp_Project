@@ -25,7 +25,7 @@ fun DiscoveryParkScreen(
 //    discoveryParkGrillRoute:(String/*,List<RetailMenuItems>*/) -> Unit,
     discoveryParkGrillRoute:(LocationAndMenu) -> Unit,
     discoveryParkStarbucksRoute:(LocationAndMenu) -> Unit,
-    Navigation:() -> Unit,
+    //Navigation:() -> Unit,
     modifier: Modifier = Modifier
 ) {
     Column(
@@ -39,28 +39,36 @@ fun DiscoveryParkScreen(
 //            verticalArrangement = Arrangement.spacedBy(dimensionResource(R.dimen.padding_small))
         ) {
             Image(
-                painter = painterResource(id = R.drawable.image_home_page_header),
+                painter = painterResource(id = R.drawable.unt_discovery_header),
                 contentDescription = null,
                 contentScale = ContentScale.FillWidth,
                 alpha = 1f,
                 modifier = Modifier.fillMaxWidth()
             )
             Box() {
-                Image(painter = painterResource(id = R.drawable.dp_grill___market), contentDescription = null,
+                Image(painter = painterResource(id = R.drawable.unt_dpgrill_button), contentDescription = null,
                     modifier = Modifier
-                        .height(90.dp)
-                        .width(216.dp)
+                        .height(120.dp)
+                        .width(280.dp)
 //                        .clickable(onClick = {discoveryParkGrillRoute("3940%20N%20Elm%20St%2C%20Denton%2C%20TX%2076207", DataSource.dpGrill)}))
                         .clickable(onClick = {discoveryParkGrillRoute(LocationAndMenu("3940%20N%20Elm%20St%2C%20Denton%2C%20TX%2076207",
                             DPGrillDataSource.dpGrill))}))
             }
             Box() {
-                Image(painter = painterResource(id = R.drawable.starbucks_dp), contentDescription = null,
+                Image(painter = painterResource(id = R.drawable.unt_dpstarbuck_button), contentDescription = null,
                     modifier = Modifier
-                        .height(90.dp)
-                        .width(216.dp)
+                        .height(120.dp)
+                        .width(280.dp)
                         .clickable(onClick = {discoveryParkStarbucksRoute(LocationAndMenu("3940%20N%20Elm%20St%2C%20Denton%2C%20TX%2076207",
                             DPStarbucksDataSource.dpStarbuck))}))
+            }
+            Box() {
+                Image(painter = painterResource(id = R.drawable.unt_bottom), contentDescription = null,
+                    modifier = Modifier
+                        .height(295.dp)
+                        .width(400.dp),
+                    Alignment.BottomCenter
+                )
             }
 
 //            Button(onClick = discoveryParkStarbucksRoute) { Text(stringResource(R.string.Discovery_park_starbucks)) }
