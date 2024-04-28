@@ -29,6 +29,7 @@ enum class MainScreen (){
     DiningHall,
     Menu,
     RetailMenu,
+    DiningHallMenu,
     Union,
     Other,
     Navigation
@@ -122,7 +123,7 @@ fun MainScreenApp(
 //                        Log.d(TAG, "IT=$it")
                         address = it
 //                        Log.d(TAG, "Address=$address")
-                        navController.navigate(MainScreen.Menu.name) },
+                        navController.navigate(MainScreen.DiningHallMenu.name) },
 
                     champsMenu = {
                         address = it
@@ -237,6 +238,9 @@ fun MainScreenApp(
                         mapHandler(address)},
                     menu
                 )
+            }
+            composable(route = MainScreen.DiningHallMenu.name) {
+
             }
         }
     }

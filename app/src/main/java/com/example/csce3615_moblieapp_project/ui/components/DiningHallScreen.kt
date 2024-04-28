@@ -19,7 +19,9 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.ViewModel
+import com.example.csce3615_moblieapp_project.HTMLparser
 import com.example.csce3615_moblieapp_project.R
+import com.example.csce3615_moblieapp_project.ui.data.DiningHallInfo
 
 @Composable
 fun DiningHallScreen(
