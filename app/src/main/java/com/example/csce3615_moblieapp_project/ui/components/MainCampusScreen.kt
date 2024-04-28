@@ -38,31 +38,38 @@ fun MainCampusScreen(
 //            verticalArrangement = Arrangement.spacedBy(dimensionResource(R.dimen.padding_small))
         ) {
             Image(
-                painter = painterResource(id = R.drawable.image_home_page_header),
+                painter = painterResource(id = R.drawable.unt_mc_header),
                 contentDescription = null,
                 contentScale = ContentScale.FillWidth,
                 alpha = 1f,
                 modifier = Modifier.fillMaxWidth()
             )
             Box() {
-                Image(painter = painterResource(id = R.drawable.dining_halls_button), contentDescription = null,
+                Image(painter = painterResource(id = R.drawable.unt_dining_button), contentDescription = null,
                     modifier = Modifier
-                        .height(90.dp)
+                        .height(150.dp)
                         .width(216.dp)
                         .clickable(onClick = DiningHallRoute))
             }
             Box() {
-                Image(painter = painterResource(id = R.drawable.union_button), contentDescription = null,
+                Image(painter = painterResource(id = R.drawable.unt_union_button), contentDescription = null,
                     modifier = Modifier
-                        .height(90.dp)
+                        .height(150.dp)
                         .width(216.dp)
                         .clickable(onClick = UnionRoute))
             }
             Box() {
-                Image(painter = painterResource(id = R.drawable.other_button), contentDescription = null,
+                Image(painter = painterResource(id = R.drawable.unt_other_button), contentDescription = null,
                     modifier = Modifier
-                        .height(90.dp)
+                        .height(150.dp)
                         .width(216.dp)
+                        .clickable(onClick = OtherRoute))
+            }
+            Box() {
+                Image(painter = painterResource(id = R.drawable.unt_bottom), contentDescription = null,
+                    modifier = Modifier
+                        .height(110.dp)
+                        .width(400.dp)
                         .clickable(onClick = OtherRoute))
             }
 //            Button(onClick = DiningHallRoute) { Text(stringResource(R.string.DiningHalls)) }

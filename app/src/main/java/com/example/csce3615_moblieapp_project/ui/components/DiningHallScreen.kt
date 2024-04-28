@@ -43,45 +43,52 @@ fun DiningHallScreen(
 //            verticalArrangement = Arrangement.spacedBy(dimensionResource(R.dimen.padding_small))
         ) {
             Image(
-                painter = painterResource(id = R.drawable.image_home_page_header),
+                painter = painterResource(id = R.drawable.unt_dining_header),
                 contentDescription = null,
                 contentScale = ContentScale.FillWidth,
                 alpha = 1f,
                 modifier = Modifier.fillMaxWidth()
             )
             Box() {
-                Image(painter = painterResource(id = R.drawable.bruceteria), contentDescription = null,
+                Image(painter = painterResource(id = R.drawable.unt_bruceteria_button), contentDescription = null,
                     modifier = Modifier
-                        .height(90.dp)
+                        .height(110.dp)
                         .width(216.dp)
                         .clickable(onClick = { bruceteriaMenu("Bruce%20Hall%2C%201624%20Chestnut%20St%2C%20Denton%2C%20TX%2076201") }))
             }
             Box() {
-                Image(painter = painterResource(id = R.drawable.champs), contentDescription = null,
+                Image(painter = painterResource(id = R.drawable.unt_champs_button), contentDescription = null,
                     modifier = Modifier
-                        .height(90.dp)
+                        .height(110.dp)
                         .width(216.dp)
                         .clickable(onClick = {champsMenu("1379%20S%20Bonnie%20Brae%20St%2C%20Denton%2C%20TX%2076207")}))
             }
             Box() {
-                Image(painter = painterResource(id = R.drawable.eagle_s_landing), contentDescription = null,
+                Image(painter = painterResource(id = R.drawable.unt_eagle_button), contentDescription = null,
                     modifier = Modifier
-                        .height(90.dp)
+                        .height(110.dp)
                         .width(216.dp)
                         .clickable(onClick = {eagleLandingMenu("%201416%20Maple%2C%20Denton%2C%20TX%2076201")}))
             }
             Box() {
-                Image(painter = painterResource(id = R.drawable.kitchen_west), contentDescription = null,
+                Image(painter = painterResource(id = R.drawable.unt_kitchen_button), contentDescription = null,
                     modifier = Modifier
-                        .height(90.dp)
+                        .height(110.dp)
                         .width(216.dp)
                         .clickable(onClick = {kitcheWestMenu("West%20Hall%2C%20320%20N%20Texas%20Blvd%2C%20Denton%2C%20TX%2076201")}))
             }
             Box() {
-                Image(painter = painterResource(id = R.drawable.mean_green_cafe), contentDescription = null,
+                Image(painter = painterResource(id = R.drawable.unt_mean_button), contentDescription = null,
+                    modifier = Modifier
+                        .height(110.dp)
+                        .width(216.dp)
+                        .clickable(onClick = {meanGreenCafeMenu("902%20Avenue%20C%2C%20Denton%2C%20TX%2076201")}))
+            }
+            Box() {
+                Image(painter = painterResource(id = R.drawable.unt_bottom), contentDescription = null,
                     modifier = Modifier
                         .height(90.dp)
-                        .width(216.dp)
+                        .width(400.dp)
                         .clickable(onClick = {meanGreenCafeMenu("902%20Avenue%20C%2C%20Denton%2C%20TX%2076201")}))
             }
 //            Button(onClick = bruceteriaMenu) { Text(stringResource(R.string.Bruceteria)) }

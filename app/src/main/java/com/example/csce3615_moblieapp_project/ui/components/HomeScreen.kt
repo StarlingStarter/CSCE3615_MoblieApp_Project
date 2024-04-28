@@ -16,6 +16,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.layout.ContentScale
+import androidx.compose.ui.res.dimensionResource
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.tooling.preview.Preview
@@ -35,10 +36,10 @@ fun HomeScreen(
         Column(
             modifier = Modifier.fillMaxWidth(),
             horizontalAlignment = Alignment.CenterHorizontally,
-//            verticalArrangement = Arrangement.spacedBy(dimensionResource(R.dimen.padding_small))
+            verticalArrangement = Arrangement.spacedBy(90.dp)
         ) {
             Image(
-                painter = painterResource(id = R.drawable.image_home_page_header),
+                painter = painterResource(id = R.drawable.unt_opening_header),
                 contentDescription = null,
                 contentScale = ContentScale.FillWidth,
                 alpha = 1f,
@@ -47,8 +48,8 @@ fun HomeScreen(
             Box() {
                 Image(painter = painterResource(id = R.drawable.main_campus_button), contentDescription = null,
                     modifier = Modifier
-                        .height(90.dp)
-                        .width(216.dp)
+                        .height(90.dp)//90
+                        .width(216.dp)//216
                         .clickable(onClick = MainCampusRoute))
             }
             Box() {
@@ -57,6 +58,13 @@ fun HomeScreen(
                         .height(90.dp)
                         .width(216.dp)
                         .clickable(onClick = discoveryParkRoute))
+            }
+            Box() {
+                Image(painter = painterResource(id = R.drawable.unt_bottom), contentDescription = null,
+                    modifier = Modifier
+                        .height(115.dp)
+                        .width(400.dp)
+                )
             }
 //            Button(onClick = MainCampusRoute) { Text(stringResource(R.string.main_campus)) }
 //            Button(onClick = discoveryParkRoute) { Text(stringResource(R.string.Discovery_park)) }
