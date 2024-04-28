@@ -36,7 +36,7 @@ fun HomeScreen(
         Column(
             modifier = Modifier.fillMaxWidth(),
             horizontalAlignment = Alignment.CenterHorizontally,
-            verticalArrangement = Arrangement.spacedBy(90.dp)
+            verticalArrangement = Arrangement.spacedBy(40.dp)
         ) {
             Image(
                 painter = painterResource(id = R.drawable.unt_opening_header),
@@ -46,24 +46,26 @@ fun HomeScreen(
                 modifier = Modifier.fillMaxWidth()
             )
             Box() {
-                Image(painter = painterResource(id = R.drawable.main_campus_button), contentDescription = null,
+//                Image(painter = painterResource(id = R.drawable.main_campus_button), contentDescription = null,
+                Image(painter = painterResource(id = R.drawable.unt_mc_button), contentDescription = null,
                     modifier = Modifier
-                        .height(90.dp)//90
+                        .height(200.dp)//90
                         .width(216.dp)//216
                         .clickable(onClick = MainCampusRoute))
             }
             Box() {
-                Image(painter = painterResource(id = R.drawable.discovery_park_button), contentDescription = null,
+//                Image(painter = painterResource(id = R.drawable.discovery_park_button), contentDescription = null,
+                Image(painter = painterResource(id = R.drawable.unt_dp_button), contentDescription = null,
                     modifier = Modifier
-                        .height(90.dp)
+                        .height(160.dp)
                         .width(216.dp)
                         .clickable(onClick = discoveryParkRoute))
             }
             Box() {
                 Image(painter = painterResource(id = R.drawable.unt_bottom), contentDescription = null,
                     modifier = Modifier
-                        .height(90.dp)
-                        .width(400.dp),
+                        .height(60.dp)
+                        .width(500.dp),
                     Alignment.BottomCenter
                 )
             }

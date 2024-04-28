@@ -111,7 +111,7 @@ fun MainScreenApp(
                         address = it.address
                         navController.navigate(MainScreen.RetailMenu.name)},
 
-                    Navigation = { navController.navigate(MainScreen.Menu.name)},
+                    //Navigation = { navController.navigate(MainScreen.Menu.name)},
                     modifier = Modifier
                         .fillMaxSize()
                         .background(Color.White)
