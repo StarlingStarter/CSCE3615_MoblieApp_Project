@@ -55,7 +55,6 @@ fun DiningHallMenu(
             }
             items(items=DiningHallMenuList){item->
                 DiningHallCard(item = item)
-
             }
 
         }
