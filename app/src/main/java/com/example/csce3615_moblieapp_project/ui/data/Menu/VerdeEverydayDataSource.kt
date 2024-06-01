@@ -8,6 +8,6 @@ import com.example.csce3615_moblieapp_project.ui.data.RetailMenuItems
  */
 object VerdeEverydayDataSource {
     val verdeEverydayMenu = listOf(
-        RetailMenuItems(0, "Verde Everday Menu" ,"Will be updated in a later patch"," "),
+        RetailMenuItems(0, "Verde Everday Menu" ,"Fast-lane market featuring your favorite Verde Everyday items like sandwiches, chips, salads and snacks, plus Scrappy’s Ice Cream, Clark Bakery treats, Lucky Break snacks and fountain drinks.","*since this is a store it doesn't have a standard menu"),
     )
 }
